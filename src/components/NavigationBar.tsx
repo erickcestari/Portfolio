@@ -1,4 +1,5 @@
 import React from 'react'
+import DarkLightToogle from './DarkLightToogle'
 
 const NavigationBar = () => {
   return (
@@ -14,6 +15,9 @@ const NavigationBar = () => {
             <a href="/blog" className="hover:underline hover:text-zinc-500">
               Blog
             </a>
+          </li>
+          <li>
+            <DarkLightToogle />
           </li>
         </ul>
       </div>
