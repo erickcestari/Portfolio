@@ -1,5 +1,5 @@
-import AboutMe from '@/components/AboutMe';
-import DisplayProfile from '@/components/DisplayProfile';
+import AboutMe from "@/components/profile/AboutMe";
+import DisplayProfile from "@/components/profile/DisplayProfile";
 
 export default function Home() {
   return (
