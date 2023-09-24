@@ -6,7 +6,7 @@ const AboutMe = () => {
   return (
     <div className="md:p-4 lg:px-6 space-y-3 text-base">
       <h1 className="text-2xl">
-        Hi, I'm <span className="font-bold">Erick Cestari</span>.
+        👋 Hi, I'm <span className="font-bold">Erick Cestari</span>.
       </h1>
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* About Me</h1>
       <div className="space-y-2">
