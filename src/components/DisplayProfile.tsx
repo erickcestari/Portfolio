@@ -2,6 +2,7 @@
 
 import useGitHubProfile from "@/hooks/useGithubProfile"
 import Image from "next/image";
+import { MapPinIcon } from "@heroicons/react/20/solid";
 
 const username = 'erickcestari';
 
@@ -12,14 +13,18 @@ const DisplayProfile = () => {
     <div>
       {loading && <p>Loading...</p>}
       {profileData && (
-        <>
+        <div>
           <div className="w-64 h-64 rounded-full shadow-2xl">
             <Image className="rounded-full" src={profileData.avatar_url} width={1200} height={1200} alt={`Github ${profileData.name} icon`} />
           </div>
-          <h1>{profileData.name}</h1>
+          <h1 className="text-lg">{profileData.name}</h1>
+          <h2 className="text-sm text-neutral-400">{profileData.login}</h2>
           <p>{profileData.bio}</p>
-          <p>{profileData.location}</p>
-        </>
+          <div className="flex items-center text-neutral-500">
+            <MapPinIcon className="w-4 h-4" />
+            <p>{profileData.location}</p>
+          </div>
+        </div>
       )}
     </div>
   )

@@ -1,8 +1,9 @@
+import NavigationBar from '@/components/NavigationBar'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto_Mono } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Roboto_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Erick Cestari Portfolio',
@@ -16,11 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans bg-gray-100">
-        <div className="container mx-auto p-8">
-          {children}
-        </div>
+      <body className="font-sans bg-gray-100 dark:bg-zinc-900 text-black dark:text-white">
+        <main>
+          <NavigationBar />
+          <div className="container mx-auto p-8">
+            {children}
+          </div>
+        </main>
       </body>
-    </html>
+    </html >
   )
 }
