@@ -12,6 +12,11 @@ const NavigationBar = () => {
             </a>
           </li>
           <li>
+            <a href="/projects" className="hover:underline hover:text-zinc-500">
+              Projects
+            </a>
+          </li>
+          <li>
             <a href="/blog" className="hover:underline hover:text-zinc-500">
               Blog
             </a>

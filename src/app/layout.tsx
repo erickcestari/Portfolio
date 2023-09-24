@@ -23,13 +23,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className='h-screen'>
+    <html lang="en" className='min-h-screen'>
       <body className={`${roboto.className} bg-gray-100 dark:bg-zinc-900 text-black dark:text-white h-full`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className='h-full'>
             <NavigationBar />
             <Suspense fallback={<Loading />}>
-              <div className="container mx-auto h-full p-8">
+              <div className="container mx-auto h-full p-4 lg:p-8">
                 {children}
               </div>
             </Suspense>

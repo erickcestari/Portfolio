@@ -11,7 +11,7 @@ const DisplayProfile = () => {
   const { profileData, loading, error } = useGitHubProfile(username);
 
   return (
-    <div className="w-80">
+    <div>
       {loading && <SkeletonDisplayProfile />}
       {profileData && (
         <div className="p-4">
