@@ -8,14 +8,14 @@ const AboutMe = () => {
       <h1 className="text-2xl">
         Hi, I'm <span className="font-bold">Erick Cestari</span>.
       </h1>
-      <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* AboutMe</h1>
+      <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* About Me</h1>
       <div className="space-y-2">
         <p>
           <span className="ml-4"></span>My coding journey began in 2020, and I now proudly serve as a FullStack developer. Initially, I was captivated by game development, delving into GML and Game Maker Studio 2. However, my path eventually led me to the enchanting of web development, where I discovered a new world.
           Today, I'm dedicated refining my algorithmic skills and delving into the realms of new programming languages like Rust and Go, with a particular interest in compilers.
         </p>
       </div>
-      <h1 className="text-xl font-black  border-b-2 border-b-zinc-600">* MySkills</h1>
+      <h1 className="text-xl font-black  border-b-2 border-b-zinc-600">* My Skills</h1>
         <MySkills />
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* Experiences</h1>
       <div className="space-y-2">

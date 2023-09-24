@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='min-h-screen'>
-      <body className={`${roboto.className} bg-gray-100 dark:bg-zinc-900 text-black dark:text-white h-full`}>
+      <body className={`${roboto.className} bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-gray-200 h-full`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <main className='h-full'>
             <NavigationBar />
