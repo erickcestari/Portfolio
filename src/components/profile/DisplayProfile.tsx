@@ -25,6 +25,10 @@ const DisplayProfile = () => {
             <MapPinIcon className="w-4 h-4" />
             <p>{profileData.location}</p>
           </div>
+          <div className="flex text-xs space-x-16 mt-2">
+            <p>Followers: {profileData.followers}</p>
+            <p>Following: {profileData.following}</p>
+          </div>
         </div>
       )}
     </div>
