@@ -19,13 +19,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="font-sans bg-gray-100 dark:bg-zinc-900 text-black dark:text-white">
-        <main>
+    <html lang="en" className='h-screen'>
+      <body className="font-sans bg-gray-100 dark:bg-zinc-900 text-black dark:text-white h-full">
+        <main className='h-full'>
           <TakeTheme />
           <NavigationBar />
           <Suspense fallback={ <Loading />}>
-            <div className="container mx-auto p-8">
+            <div className="container mx-auto h-full p-8">
               {children}
             </div>
           </Suspense>
