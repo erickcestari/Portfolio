@@ -7,6 +7,13 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
+  theme: {  
+    extend: {
+      fontFamily: {
+        mono: ['var(--font-roboto-mono)'],
+      }
+    }
+  },
   plugins: [],
 }
 export default config

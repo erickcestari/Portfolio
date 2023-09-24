@@ -14,7 +14,7 @@ const DisplayProfile = () => {
     <div className="w-80">
       {loading && <SkeletonDisplayProfile />}
       {profileData && (
-        <div>
+        <div className="p-4">
           <div className="w-64 h-64 rounded-full shadow-2xl">
             <Image className="rounded-full" src={profileData.avatar_url} width={1200} height={1200} alt={`Github ${profileData.name} icon`} />
           </div>

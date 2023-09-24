@@ -1,5 +1,5 @@
 import React from 'react'
-import DarkLightToogle from './DarkLightToogle'
+import DarkLightToogle from './theme/DarkLightToogle'
 
 const NavigationBar = () => {
   return (
