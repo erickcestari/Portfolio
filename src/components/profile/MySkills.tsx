@@ -16,7 +16,7 @@ const MySkills = () => {
           <span className="font-bold">Databases:</span> Postgres, MySql.
         </p>
         <p>
-          <span className="font-bold">Tools:</span> Git, gitlab, Docker, Windows, VSCode.
+          <span className="font-bold">Tools:</span> Git, gitlab, Docker, AWS, VSCode, Windows.
         </p>
         <p>
           <span className="font-bold">Vercioning:</span> Vercel.
