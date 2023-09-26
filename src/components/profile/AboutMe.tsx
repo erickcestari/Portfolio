@@ -23,7 +23,7 @@ const AboutMe = () => {
           <span className="ml-4"></span> I have three months of experience as a FullStack developer. I am a technical specialist in Information Technology (IT), and I am currently studying Information Systems at Unifebe.
         </p>
         <p>
-        You can view my projects and contributions to open-source projects <Link href="/projects" className="text-blue-500 hover:underline">here</Link> or at <Link href="https://github.com/erickcestari" target="_blank" className="text-blue-500 hover:underline">github</Link>  page.
+        You can view my projects and contributions to open-source projects <Link href="/projects" className="text-blue-700 hover:underline">here</Link> or at <Link href="https://github.com/erickcestari" target="_blank" className="text-blue-700 hover:underline">github</Link>  page.
         </p>
       </div>
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* Contacts</h1>

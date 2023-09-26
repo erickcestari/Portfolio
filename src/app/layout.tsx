@@ -1,4 +1,4 @@
-import NavigationBar from '@/components/NavigationBar'
+import NavigationBar from '@/components/nav/NavigationBar'
 import type { Metadata } from 'next'
 import { Roboto_Mono, } from 'next/font/google'
 import { Suspense } from 'react'
