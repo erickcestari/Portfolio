@@ -1,9 +1,8 @@
 "use client"
 
-import React from 'react'
-import DarkLightToogle from '../theme/DarkLightToogle'
 import Link from 'next/link'
-import Router, { useParams, useRouter, usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation'
+import DarkLightToogle from '../theme/DarkLightToogle'
 import NavLink from './NavLink'
 
 const NavigationBar = () => {
