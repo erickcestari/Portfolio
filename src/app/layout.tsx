@@ -5,6 +5,7 @@ import { Suspense } from 'react'
 import Loading from './Loading'
 import './globals.css'
 import { ThemeProvider } from './theme-provider'
+import Footer from '@/components/footer/Footer'
 
 const roboto = Roboto_Mono({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
               </div>
             </Suspense>
           </main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html >
