@@ -16,20 +16,20 @@ const AboutMe = () => {
         </p>
       </div>
       <h1 className="text-xl font-black  border-b-2 border-b-zinc-600">* My Skills</h1>
-        <MySkills />
+      <MySkills />
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* Experiences</h1>
       <div className="space-y-2">
         <p>
           <span className="ml-4"></span> I have three months of experience as a FullStack developer. I am a technical specialist in Information Technology (IT), and I am currently studying Information Systems at Unifebe.
         </p>
         <p>
-        You can view my projects and contributions to open-source projects <Link href="/projects" className="text-blue-700 hover:underline">here</Link> or at <Link href="https://github.com/erickcestari" target="_blank" className="text-blue-700 hover:underline">github</Link>  page.
+          You can view my projects and contributions to open-source projects <Link href="/projects" className="text-blue-700 hover:underline">Click Here</Link> or at <Link href="https://github.com/erickcestari" target="_blank" className="text-blue-700 hover:underline">github</Link>  page.
         </p>
       </div>
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* Contacts</h1>
       <div className="flex space-x-4">
-        <Contacts title="Github" url="https://github.com/erickcestari" src="github.svg"/>
-        <Contacts title="Linkedin" url="https://www.linkedin.com/in/erick-cestari" src="linkedin.svg"/>
+        <Contacts title="Github" url="https://github.com/erickcestari" src="github.svg" />
+        <Contacts title="Linkedin" url="https://www.linkedin.com/in/erick-cestari" src="linkedin.svg" />
       </div>
     </div>
   )

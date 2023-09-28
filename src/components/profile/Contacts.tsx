@@ -11,7 +11,7 @@ interface ContactsProps {
 const Contacts = (props: ContactsProps) => {
   const { title, url, src } = props
   return (
-    <Tooltip title={title}>
+    <Tooltip title={title} arrow>
       <Link href={url} className="inline-block" target="_blank">
         <Image src={src} className="" width={36} height={36} alt={`${title} icon`} />
       </Link>

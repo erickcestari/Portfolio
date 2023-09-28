@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="flex items-center justify-center pb-3">
+    <div className="flex items-center justify-center pb-3 px-3 text-center">
       © 2023 Erick Cestari. All rights reserved.
     </div>
   )
