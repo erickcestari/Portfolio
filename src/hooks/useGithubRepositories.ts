@@ -1,9 +1,10 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { GithubRepository } from '@/types/githubRepositories';
 
 const useGithubRepositories = (username: string) => {
-  const [RepositoriesData, setRepositoriesData] = useState<null | any[]>(null);
+  const [repositoriesData, setRepositoriesData] = useState<null| GithubRepository[]>(null);
   const [loading, setLoading] = useState<Boolean>(true);
   const [error, setError] = useState<unknown>(null);
 
@@ -29,7 +30,7 @@ const useGithubRepositories = (username: string) => {
     }
   }, [username]);
 
-  return { RepositoriesData, loading, error };
+  return { repositoriesData, loading, error };
 };
 
 export default useGithubRepositories;

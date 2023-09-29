@@ -7,7 +7,7 @@ const MySkills = () => {
           <span className="font-bold">Languages:</span> Javascript, Typescript, Python, C#, GML, Rust, C#, SQL, HTML, CSS.
         </p>
         <p>
-          <span className="font-bold">Frameworks:</span> NextJS, NodeJS, Fastify, Express, NestJs, TailwindCSS.
+          <span className="font-bold">Frameworks:</span> NextJS, NodeJS, Fastify, Express, NestJs, .NET, TailwindCSS.
         </p>
         <p>
           <span className="font-bold">Libraries:</span> React, Prisma, Zod, Axios, MUI.

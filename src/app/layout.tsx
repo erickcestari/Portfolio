@@ -30,7 +30,7 @@ export default function RootLayout({
           <main className='h-full'>
             <NavigationBar />
             <Suspense fallback={<Loading />}>
-              <div className="container mx-auto h-full p-4 lg:p-8">
+              <div className="container mx-auto h-full p-4 py-10 lg:p-10 xl:p-12">
                 {children}
               </div>
             </Suspense>
