@@ -20,7 +20,10 @@ const AboutMe = () => {
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* Experiences</h1>
       <div className="space-y-2">
         <p>
-          <span className="ml-4"></span> I have three months of experience as a FullStack developer. I am a technical specialist in Information Technology (IT), and I am currently studying Information Systems at Unifebe.
+          <span className="ml-4"></span> I have gained three months of valuable experience as a FullStack developer, where I've had the opportunity to work on various projects and enhance my technical skills. My educational background aligns with my career aspirations as I am currently enrolled in the Information Systems program at Unifebe.
+        </p>
+        <p>
+          <span className="ml-4"></span>I am a technical specialist in Information Technology (IT) and a FullStack developer with a passion for learning and sharing my knowledge with others.
         </p>
         <p>
           You can view my projects and contributions to open-source projects <Link href="/projects" className="text-blue-700 hover:underline">Click Here</Link> or at <Link href="https://github.com/erickcestari" target="_blank" className="text-blue-700 hover:underline">github</Link>  page.
