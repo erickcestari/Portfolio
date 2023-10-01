@@ -2,14 +2,15 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import DarkLightToogle from '../theme/DarkLightToogle'
+import DarkLightToogle from './theme/DarkLightToogle'
 import NavLink from './NavLink'
+import Translate from './Translate'
 
 const NavigationBar = () => {
   const pathName = usePathname()
 
   return (
-    <nav className="bg-transparent fixed top-0 left-0 right-0 z-10 p-4">
+    <nav className="backdrop-blur-md fixed top-0 left-0 right-0 z-10 p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div>
           <Link href="/" className={`hover:underline hover:text-zinc-500`}>
@@ -28,6 +29,9 @@ const NavigationBar = () => {
           </li>
           <li>
             <DarkLightToogle />
+          </li>
+          <li>
+            <Translate />
           </li>
         </ul>
       </div>

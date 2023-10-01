@@ -1,25 +1,27 @@
+import { useTranslation } from "react-i18next"
 
 const MySkills = () => {
+  const {t} = useTranslation()
   return (
     <>
       <div className="space-y-2">
         <p>
-          <span className="font-bold">Languages:</span> Javascript, Typescript, Python, C#, GML, Rust, C#, SQL, HTML, CSS.
+          <span className="font-bold">{t('languages')}:</span> Javascript, Typescript, Python, C#, GML, Rust, C#, SQL, HTML, CSS.
         </p>
         <p>
-          <span className="font-bold">Frameworks:</span> NextJS, NodeJS, Fastify, Express, NestJs, .NET, TailwindCSS.
+          <span className="font-bold">{t('frameworks')}:</span> NextJS, NodeJS, Fastify, Express, NestJs, .NET, TailwindCSS.
         </p>
         <p>
-          <span className="font-bold">Libraries:</span> React, Prisma, Zod, Axios, MUI.
+          <span className="font-bold">{t('libraries')}:</span> React, Prisma, Zod, Axios, MUI.
         </p>
         <p>
-          <span className="font-bold">Databases:</span> Postgres, MySql.
+          <span className="font-bold">{t('databases')}:</span> Postgres, MySql.
         </p>
         <p>
-          <span className="font-bold">Tools:</span> Git, gitlab, Docker, AWS, VSCode, Windows.
+          <span className="font-bold">{t('tools')}:</span> Git, gitlab, Docker, AWS, VSCode, Windows.
         </p>
         <p>
-          <span className="font-bold">Vercioning:</span> Vercel.
+          <span className="font-bold">{t('versioning')}:</span> Vercel.
         </p>
       </div>
     </>

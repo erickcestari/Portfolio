@@ -1,35 +1,38 @@
-import Link from "next/link"
+"use client"
+
+;;import Link from "next/link"
 import Contacts from "./Contacts"
 import MySkills from "./MySkills"
+import { useTranslation } from "react-i18next"
 
 const AboutMe = () => {
+  const {t} = useTranslation()
   return (
     <div className="md:p-4 lg:px-6 space-y-3 text-base">
       <h1 className="text-2xl">
-        👋 Hi, I'm <span className="font-bold">Erick Cestari</span>.
+        👋 {t('hiIm')} <span className="font-bold">Erick Cestari</span>.
       </h1>
-      <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* About Me</h1>
+      <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {t('aboutMe')}</h1>
       <div className="space-y-2">
         <p>
-          <span className="ml-4"></span>My coding journey began in 2020, and I now proudly serve as a FullStack developer. Initially, I was captivated by game development, delving into GML and Game Maker Studio 2. However, my path eventually led me to the enchanting of web development, where I discovered a new world.
-          Today, I'm dedicated refining my algorithmic skills and delving into the realms of new programming languages like Rust and Go, with a particular interest in compilers.
+          <span className="ml-4"></span> {t('aboutMeContent')}
         </p>
       </div>
-      <h1 className="text-xl font-black  border-b-2 border-b-zinc-600">* My Skills</h1>
+      <h1 className="text-xl font-black  border-b-2 border-b-zinc-600">* {t('mySkills')}</h1>
       <MySkills />
-      <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* Experiences</h1>
+      <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {t('experience')}</h1>
       <div className="space-y-2">
         <p>
-          <span className="ml-4"></span> I have gained three months of valuable experience as a FullStack developer, where I've had the opportunity to work on various projects and enhance my technical skills. My educational background aligns with my career aspirations as I am currently enrolled in the Information Systems program at Unifebe.
+          {t('experienceContent')}
         </p>
         <p>
-          <span className="ml-4"></span>I am a technical specialist in Information Technology (IT) and a FullStack developer with a passion for learning and sharing my knowledge with others.
+          {t('experienceContent2')}
         </p>
         <p>
-          You can view my projects and contributions to open-source projects <Link href="/projects" className="text-blue-700 hover:underline">Click Here</Link> or at <Link href="https://github.com/erickcestari" target="_blank" className="text-blue-700 hover:underline">github</Link>  page.
+          {t('youCanView')} <Link href="/projects" className="text-blue-700 hover:underline">{t('here')}</Link> {t('orAt')} <Link href="https://github.com/erickcestari" target="_blank" className="text-blue-700 hover:underline">github</Link> {t('pageGithub')}.
         </p>
       </div>
-      <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* Contacts</h1>
+      <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {t('contacts')}</h1>
       <div className="flex space-x-4">
         <Contacts title="Github" url="https://github.com/erickcestari" src="github.svg" />
         <Contacts title="Linkedin" url="https://www.linkedin.com/in/erick-cestari" src="linkedin.svg" />

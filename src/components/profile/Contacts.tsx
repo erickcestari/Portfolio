@@ -13,7 +13,7 @@ const Contacts = (props: ContactsProps) => {
   return (
     <Tooltip title={title} arrow>
       <Link href={url} className="inline-block" target="_blank">
-        <Image src={src} className="" width={36} height={36} alt={`${title} icon`} />
+        <Image src={src} className="dark:invert" width={36} height={36} alt={`${title} icon`} />
       </Link>
     </Tooltip>
   )
