@@ -14,7 +14,7 @@ const DisplayProfile = () => {
     <div>
       {loading && <SkeletonDisplayProfile />}
       {profileData && (
-        <div className="p-4 select-none flex justify-center items-center flex-col md:items-start md:justify-normal">
+        <div className="select-none flex justify-center items-center flex-col md:items-start md:justify-normal">
           <div className="w-72 h-72 md:h-64 md:w-64 rounded-full shadow-2xl">
             <Image priority className="rounded-full" src={profileData.avatar_url} width={1000} height={1000} alt={`Github ${profileData.name} icon`} />
           </div>

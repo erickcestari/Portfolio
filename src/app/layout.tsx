@@ -1,16 +1,17 @@
 import NavigationBar from '@/components/nav/NavigationBar'
 import type { Metadata } from 'next'
-import { Roboto_Mono, } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import { Suspense } from 'react'
 import Loading from './Loading'
 import './globals.css'
 import { ThemeProvider } from './theme-provider'
 import Footer from '@/components/footer/Footer'
 
-const roboto = Roboto_Mono({
+const roboto = Roboto({
+  weight: ['100', '400', '700'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-roboto-mono',
 })
 
 export const metadata: Metadata = {
@@ -25,17 +26,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-gray-200 h-full`}>
+      <body className={`bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-gray-200 h-full`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <main className='h-full'>
+          <main className={`${roboto.className} md:px-10 lg:px-40`}>
             <NavigationBar />
-            <Suspense fallback={<Loading />}>
-              <div className="container mx-auto h-full p-4 py-14 lg:p-14 xl:p-14 xl:px-26">
-                {children}
-              </div>
-            </Suspense>
+            <div className={`mx-auto h-full p-8 py-14`}>
+              {children}
+            </div>
+            <Footer />
           </main>
-          <Footer />
         </ThemeProvider>
       </body>
     </html >

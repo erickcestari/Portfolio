@@ -10,17 +10,12 @@ const NavigationBar = () => {
   const pathName = usePathname()
 
   return (
-    <nav className="backdrop-blur-md fixed top-0 left-0 right-0 z-10 p-4">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="absolute top-0 left-0 right-0 z-10 p-4 md:px-10 lg:px-40">
+      <div className="mx-auto flex justify-between items-center">
         <div>
-          <Link href="/" className={`hover:underline hover:text-zinc-500`}>
-            Erick Cestari
-          </Link>
+          <NavLink href="/" pathName={pathName} name="Erick Cestari" />
         </div>
         <ul className="flex space-x-4 text-black dark:text-white">
-          <li>
-            <NavLink href="/" pathName={pathName} name="Home" />
-          </li>
           <li>
             <NavLink href="/projects" pathName={pathName} name="Projects" />
           </li>

@@ -28,7 +28,7 @@ const Projects = () => {
 
 
   return (
-    <div className='space-y-2'>
+    <div className='space-y-2 font-mono'>
       <h1 className='text-3xl font-bold'>λ Projects</h1>
       {loading && <SkeletonGithubRepositories />}
       {repositoriesData && repositories && (
