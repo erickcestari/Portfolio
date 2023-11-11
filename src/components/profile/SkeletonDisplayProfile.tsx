@@ -1,6 +1,3 @@
-import { Skeleton } from '@mui/material'
-import React from 'react'
-
 const SkeletonDisplayProfile = () => {
   return (
     <div className='p-4 flex animate-pulse justify-center items-center flex-col md:items-start md:justify-normal space-y-2'>

@@ -5,7 +5,7 @@ import { GithubRepository } from '@/types/githubRepositories';
 
 const useGithubRepositories = (username: string) => {
   const [repositoriesData, setRepositoriesData] = useState<null| GithubRepository[]>(null);
-  const [loading, setLoading] = useState<Boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<unknown>(null);
 
   useEffect(() => {
@@ -13,9 +13,12 @@ const useGithubRepositories = (username: string) => {
       try {
         setLoading(true);
         const response = await axios.get(`https://api.github.com/users/${username}`);
-        const url = response.data.repos_url;
+        const url = response.data.repos_url + "?per_page=100";
         const responseRepos = await axios.get(url);
-        setRepositoriesData(responseRepos.data);
+        console.log(responseRepos)
+        const repos = responseRepos.data as GithubRepository[]
+        repos.sort((a, b)=> b.stargazers_count - a.stargazers_count)
+        setRepositoriesData(repos);
         setError(null);
       } catch (err) {
         setRepositoriesData(null);
