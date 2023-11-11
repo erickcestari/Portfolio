@@ -8,7 +8,7 @@ import SkeletonDisplayProfile from "./SkeletonDisplayProfile";
 const username = 'erickcestari';
 
 const DisplayProfile = () => {
-  const { profileData, loading, error } = useGitHubProfile(username);
+  const { profileData, loading } = useGitHubProfile(username);
 
   return (
     <div>

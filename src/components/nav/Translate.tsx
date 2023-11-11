@@ -1,8 +1,9 @@
+"use client"
+
 import React, { useState } from 'react';
 import { LanguageIcon } from "@heroicons/react/24/solid";
 import { useTranslation, initReactI18next } from 'react-i18next';
 
-// Importe o i18next e os arquivos de tradução necessários aqui
 import i18n from 'i18next';
 import enTranslation from "@/translations/en.json"
 import ptTranslation from '@/translations/pt.json';
@@ -33,7 +34,16 @@ const Translate = () => {
 
   return (
     <div className='flex w-20'>
-      <div className='flex select-none hover:text-zinc-500 cursor-pointer' onClick={toggleLanguage}>
+      <div
+        className='flex select-none hover:text-zinc-500 cursor-pointer'
+        onClick={toggleLanguage}
+        onKeyDown={(event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            toggleLanguage();
+          }
+        }}
+        tabIndex={0}
+      >
         <LanguageIcon
           className="w-6 h-6"
         />

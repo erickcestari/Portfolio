@@ -1,16 +1,21 @@
+"use client"
+
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 
 interface NavLinkProps {
   href: string
-  pathName: string
   name: string
 }
-const NavLink = (props: NavLinkProps) => {
-  const { href, pathName, name } = props
 
+const NavLink = (props: NavLinkProps) => {
+  const { href, name } = props
+  const pathName = usePathname()
   return (
-    <Link href={href} className={`hover:underline hover:text-zinc-500 ${pathName === href && "text-blue-700 hover:text-blue-500"}`}>
-      {name}
+    <Link href={href} className={`hover:text-blue-500 ${pathName === href && "text-blue-700"}`}>
+      <p className="text-lg">
+        {name}
+      </p>
     </Link>
   )
 }

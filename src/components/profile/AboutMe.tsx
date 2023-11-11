@@ -14,17 +14,12 @@ const AboutMe = () => {
       </h1>
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {t('aboutMe')}</h1>
       <div className="space-y-2">
-        <p>
-          <span className="ml-4"></span> {t('aboutMeContent')}
-        </p>
+          {t('aboutMeContent')}
       </div>
       <h1 className="text-xl font-black  border-b-2 border-b-zinc-600">* {t('mySkills')}</h1>
       <MySkills />
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {t('experience')}</h1>
       <div className="space-y-2">
-        <p>
-          {t('experienceContent')}
-        </p>
         <p>
           {t('experienceContent2')}
         </p>

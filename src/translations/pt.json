@@ -1,7 +1,7 @@
 {
   "language": "PT-BR",
   "aboutMe": "Sobre mim",
-  "aboutMeContent": "Minha jornada de programacão começou em 2020 e agora atuo como desenvolvedor FullStack. Inicialmente, fui cativado pelo desenvolvimento de jogos, mergulhando em GML e Game Maker Studio 2. Porém, meu caminho acabou me levando ao encanto do desenvolvimento web, onde descobri um novo mundo. Hoje, me dedico a refinar minhas habilidades algorítmicas e a aprofundar-me no domínio de novas linguagens de programação como Rust e Go, com interesse particular em compiladores.",
+  "aboutMeContent": "Minha jornada de programacão começou em 2020 e agora atuo como desenvolvedor FullStack. Inicialmente, fui cativado pelo desenvolvimento de jogos, mergulhando em GML e Game Maker Studio 2. Porém, meu caminho acabou me levando ao encanto do desenvolvimento web, onde descobri um novo mundo.",
   "hiIm": "Oi, eu sou o",
   "mySkills": "Minhas habilidades",
   "languages": "Linguagens",
@@ -9,7 +9,7 @@
   "libraries": "Bibliotecas",
   "databases": "Bancos de dados",
   "tools": "Ferramentas",
-  "versioning": "Versionamento",
+  "hosting": "Hospedagem",
   "experience": "Experiência",
   "experienceContent": "Tive seis meses de valiosa experiência como desenvolvedor FullStack, onde tive a oportunidade de trabalhar em diversos projetos e aprimorar minhas habilidades técnicas. Minha formação educacional está alinhada com minhas aspirações profissionais, pois atualmente estou matriculado no programa de Sistemas de Informação da Unifebe.",
   "experienceContent2": "Sou técnico de Tecnologia da Informação (TI) e desenvolvedor FullStack com paixão por aprender e compartilhar meu conhecimento com outras pessoas.",
