@@ -18,5 +18,7 @@
   "orAt": "or at",
   "pageGithub": "page",
   "contacts": "Contacts",
-  "projects": "Projects"
+  "projects": "Projects",
+  "playConway": "Play Conway's Game of Life",
+  "pauseConway": "Pause Conway's Game of Life "
 }

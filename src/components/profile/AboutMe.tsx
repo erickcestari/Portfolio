@@ -21,11 +21,11 @@ const AboutMe = () => {
         <p className="text-lg flex justify-center items-center cursor-pointer" onClick={() => setStopGame(!stopGame)}>
           {stopGame ? (
             <>
-              <PlayIcon className="h-6 w-6"/> Play Conway's Game of Life 
+              <PlayIcon className="h-6 w-6"/> {t('playConway')}
             </>
           ) : (
             <>
-              <PauseIcon className="h-6 w-6"/> Pause Conway's Game of Life 
+              <PauseIcon className="h-6 w-6"/> {t('pauseConway')}
             </>
           )}
         </p>

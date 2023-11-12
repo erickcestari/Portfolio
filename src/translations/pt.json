@@ -18,5 +18,7 @@
   "orAt": "ou na página do meu",
   "pageGithub": "",
   "contacts": "Contatos",
-  "projects": "Projetos"
+  "projects": "Projetos",
+  "playConway": "Ativar Jogo da Vida Conway",
+  "pauseConway": "Pausar Jogo da Vida Conway"
 }
