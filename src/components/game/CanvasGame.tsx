@@ -13,7 +13,7 @@ const CanvasGame: React.FC<CanvasGameProps> = (props) => {
 
   const draw = (ctx: CanvasRenderingContext2D, size: number) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    const color = theme.theme === 'dark' ? '#2222222' : '#cccccc';
+    const color = theme.theme === 'dark' ? '#333333' : '#cccccc';
 
     let x = 0;
     for (const col of matrix) {
