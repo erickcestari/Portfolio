@@ -4,6 +4,8 @@ import useGitHubProfile from "@/hooks/useGithubProfile"
 import Image from "next/image";
 import { MapPinIcon } from "@heroicons/react/20/solid";
 import SkeletonDisplayProfile from "./SkeletonDisplayProfile";
+import LifeGame from "../game/LifeGame";
+import { useState } from "react";
 
 const username = 'erickcestari';
 
@@ -31,6 +33,7 @@ const DisplayProfile = () => {
           </div>
         </div>
       )}
+      
     </div>
   )
 }
