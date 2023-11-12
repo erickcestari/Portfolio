@@ -13,7 +13,7 @@ const CanvasGame: React.FC<CanvasGameProps> = (props) => {
 
   const draw = (ctx: CanvasRenderingContext2D, size: number) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-    const color = theme.theme === 'dark' ? '#2222222' : '#dddddd';
+    const color = theme.theme === 'dark' ? '#2222222' : '#cccccc';
 
     let x = 0;
     for (const col of matrix) {
@@ -37,7 +37,10 @@ const CanvasGame: React.FC<CanvasGameProps> = (props) => {
       if (context == null) {
         return;
       }
-      const size = context.canvas.width / 100;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      const size = context.canvas.width / matrix.length;
 
       let animationFrameId: number;
 
@@ -60,7 +63,7 @@ const CanvasGame: React.FC<CanvasGameProps> = (props) => {
     }
   }, [draw]);
 
-  return <canvas className='absolute top-0 left-0 min-h-screen min-w-full -z-30' ref={canvasRef}/>;
+  return <canvas className='absolute top-0 left-0 -z-30' ref={canvasRef}/>;
 };
 
 export default CanvasGame;

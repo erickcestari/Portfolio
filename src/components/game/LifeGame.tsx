@@ -8,8 +8,8 @@ interface LifeGameProps {
 
 const LifeGame = (props: LifeGameProps) => {
   const { stopGame } = props;
-  const cols = createArray(100);
-  const [matrix, setMatrix] = useState(createMatrix(100, cols));
+  const cols = createArray(200);
+  const [matrix, setMatrix] = useState(createMatrix(200, cols));
 
   const playGame = () => {
     setMatrix((prevMatrix) => playCornwayGame(prevMatrix));
