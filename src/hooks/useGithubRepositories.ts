@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { GithubRepository } from '@/types';
+import { GithubRepository } from '@/types/GithubRepositories';
 
 const useGithubRepositories = (username: string) => {
   const [repositoriesData, setRepositoriesData] = useState<null| GithubRepository[]>(null);
