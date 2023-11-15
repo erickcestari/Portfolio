@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Article } from "@/types";
+import { Article } from "@/types/Article";
 import { formatDate } from "@/utils/formatDate";
 import { parseTitleHref } from "@/utils/parseTitleHref";
 

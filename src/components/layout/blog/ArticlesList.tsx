@@ -1,7 +1,7 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { ArticleCard } from "@/components/ui/ArticleCard";
-import { Article } from "@/types";
+import { Article } from "@/types/Article";
 
 interface ArticlesListProps {
   articlesData: Article[];

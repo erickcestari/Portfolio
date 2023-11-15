@@ -1,7 +1,7 @@
 "use client";
 
 import { useQueryParams } from "@/hooks/useQueryParams";
-import { Category } from "@/types";
+import { Category } from "@/types/Category";
 import { useSearchParams } from "next/navigation";
 
 interface CategoriesListProps {

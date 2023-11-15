@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
-import { Article } from "@/types";
+import { Article } from "@/types/Article";
 import { articles } from "./articles";
+import { Category } from "@/types/Category";
 
 interface FindAllArticlesProps {
   categoriesQueryParams?: string;
@@ -26,7 +27,7 @@ export const findAllArticles = ({
   if (searchParamsValues?.length > 0) {
     const filteredArticles = articles.filter((item) => {
       return searchParamsValues?.some((param) =>
-        item.categories?.some((category) => category.title === param)
+        item.categories?.some((category: Category) => category.title === param)
       );
     });
 
