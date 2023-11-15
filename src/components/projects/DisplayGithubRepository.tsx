@@ -1,4 +1,4 @@
-import { GithubRepository } from "@/types/githubRepositories"
+import { GithubRepository } from "@/types/GithubRepositories"
 import { StarIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 

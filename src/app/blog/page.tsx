@@ -1,9 +1,35 @@
-import React from 'react'
+import { ArticlesList } from "@/components/layout/blog/ArticlesList";
+import { CategoriesList } from "@/components/layout/blog/CategoriesList";
+import { categories } from "@/mdx-database/categories";
+import { findAllArticles } from "@/mdx-database/findAllArticles";
 
-const Blog = () => {
+export const metadata = {
+  title: "Blog | Erick",
+  description: "Tech articles",
+};
+
+export default async function Blog({
+  params,
+  searchParams,
+}: Readonly<{
+  params: { slug: string };
+  searchParams: { categories: string | undefined };
+}>) {
+  const { articles } = findAllArticles({
+    categoriesQueryParams: searchParams.categories,
+  });
+
   return (
-    <div>Blog</div>
-  )
-}
+    <section className="flex flex-col gap-[2rem]">
+      <CategoriesList categoriesData={categories} />
 
-export default Blog
+      <div className="flex flex-col gap-[1rem]">
+        <div className="flex justify-between items-center">
+          <h2 className="text-lg laptop:text-xl">Artigos</h2>
+          <span className="text-text2">{articles?.length} artigos</span>
+        </div>
+        <ArticlesList articlesData={articles} />
+      </div>
+    </section>
+  );
+}

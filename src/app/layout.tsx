@@ -1,10 +1,9 @@
-import Head from 'next/head';
 import NavigationBar from '@/components/nav/NavigationBar';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from './theme-provider';
-import Footer from '@/components/footer/Footer';
+import Footer from '@/components/layout/footer/Footer';
 
 const poppins = Poppins({ weight: ["400", "500", "700"], subsets: ["latin"] });
 

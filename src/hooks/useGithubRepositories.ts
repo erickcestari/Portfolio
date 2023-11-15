@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { GithubRepository } from '@/types/githubRepositories';
+import { GithubRepository } from '@/types';
 
 const useGithubRepositories = (username: string) => {
   const [repositoriesData, setRepositoriesData] = useState<null| GithubRepository[]>(null);
@@ -15,7 +15,7 @@ const useGithubRepositories = (username: string) => {
         const response = await axios.get(`https://api.github.com/users/${username}`);
         const url = response.data.repos_url + "?per_page=100";
         const responseRepos = await axios.get(url);
-        console.log(responseRepos)
+
         const repos = responseRepos.data as GithubRepository[]
         repos.sort((a, b)=> b.stargazers_count - a.stargazers_count)
         setRepositoriesData(repos);

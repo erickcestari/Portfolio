@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { GithubProfileData } from '@/types/githubProfileData';
+import { GithubProfileData } from '@/types';
 
 const useGitHubProfile = (username: string) => {
   const [profileData, setProfileData] = useState<GithubProfileData | null>(null);
-  const [loading, setLoading] = useState<Boolean>(true);
+  const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<unknown>(null);
 
   useEffect(() => {

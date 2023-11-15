@@ -1,4 +1,4 @@
-import { createArray, createMatrix, playCornwayGame } from "@/utils/game";
+import { createMatrix, playCornwayGame } from "@/utils/game";
 import CanvasGame from "./CanvasGame";
 import { useState, useEffect } from "react";
 
@@ -8,8 +8,7 @@ interface LifeGameProps {
 
 const LifeGame = (props: LifeGameProps) => {
   const { stopGame } = props;
-  const cols = createArray(200);
-  const [matrix, setMatrix] = useState(createMatrix(200, cols));
+  const [matrix, setMatrix] = useState(createMatrix(200, 200));
 
   const playGame = () => {
     setMatrix((prevMatrix) => playCornwayGame(prevMatrix));
