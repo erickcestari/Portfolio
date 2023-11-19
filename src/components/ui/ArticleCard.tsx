@@ -15,17 +15,25 @@ export const ArticleCard = ({
   const hrefTitle = parseTitleHref(title);
 
   return (
-    <Link href={`/blog/${hrefTitle}`} role="link">
-      <button
-        role="listitem"
-        className="h-[19rem] w-full p-[1.25rem] text-left flex flex-col gap-[0.75rem] rounded-[1rem] bg-background2"
+    <Link href={`/blog/${hrefTitle}`}>
+      <li
+        className="h-[19rem] w-full p-[1.25rem] text-left flex flex-col gap-[0.75rem] rounded-[1rem] 
+        dark:bg-zinc-800
+        bg-zinc-300
+        "
       >
         <h2>{title}</h2>
 
         <div className="flex gap-x-3 gap-y-2 flex-wrap">
           {categories.map(({ id, title }) => (
             <span
-              className={`size: "small", variant: "outline"`}
+              className={`
+              p-1
+              rounded-md
+              border-2
+              dark:border-zinc-400
+              border-zinc-800
+              `}
               key={id}
             >
               {title}
@@ -40,7 +48,7 @@ export const ArticleCard = ({
         <div className="w-full flex items-center justify-between">
           <span className="text-text2 text-sm">{formatDate(updatedAt)}</span>
         </div>
-      </button>
+      </li>
     </Link>
   );
 };

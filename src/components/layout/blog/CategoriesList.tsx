@@ -21,6 +21,16 @@ export const CategoriesList = ({ categoriesData }: CategoriesListProps) => {
               <button
                 key={id}
                 onClick={() => handleParamValue(title)}
+                className={`
+                hover:invert
+                dark:bg-zinc-300
+                dark:text-zinc-800 
+                bg-zinc-800 
+                text-zinc-300
+                p-2
+                rounded-md
+                ${searchParamsHook.get("categories")?.split(",").some((category: string) => category === title) ? "invert" : null}
+              `}
               >
                 {title}
               </button>
