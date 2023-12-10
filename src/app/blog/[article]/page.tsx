@@ -14,10 +14,9 @@ export default async function ArticlePage({
   const { article } = findArticleByTitle(params.article);
 
   return (
-    <section className="flex flex-col items-center laptop:items-start gap-[5rem]">
+    <section className="flex flex-col items-center gap-[5rem]">
       <ArticleHero article={article} />
-
-      <div className="grid grid-cols-1 laptop:grid-cols-[1fr_min-content] gap-[5rem]">
+      <div className="grid grid-cols-1 gap-[5rem]">
         <ArticleBody articlePath={article.body} />
         <Summary articleTopics={article.topics} />
       </div>

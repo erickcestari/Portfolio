@@ -5,7 +5,7 @@ import { MoonIcon, SunIcon } from '@heroicons/react/20/solid'
 import { useTheme } from 'next-themes'
 import { useEffect } from 'react'
 
-const DarkLightToogle = () => {
+const ToogleDarkLight = () => {
   const { systemTheme, theme, setTheme } = useTheme()
   const loaded = useLoaded();
 
@@ -29,4 +29,4 @@ const DarkLightToogle = () => {
   )
 }
 
-export default DarkLightToogle
+export default ToogleDarkLight

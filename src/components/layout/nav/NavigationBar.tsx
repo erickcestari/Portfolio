@@ -1,27 +1,27 @@
-import DarkLightToogle from './theme/DarkLightToogle'
+import ToogleDarkLight from './theme/ToogleDarkLight'
 import NavLink from './NavLink'
 import Translate from './Translate'
 
 const NavigationBar = () => {
   return (
-    <nav className="z-10">
+    <nav className="z-10 md:block hidden">
       <div className="mx-auto flex justify-between items-center">
         <div>
           <NavLink href="/" name="Erick Cestari" />
         </div>
         <ul className="flex space-x-4 text-black dark:text-white">
-          <li>
+          <button>
             <NavLink href="/projects" name="Projects" />
-          </li>
-          <li>
+          </button>
+          <button>
             <NavLink href="/blog" name="Blog" />
-          </li>
-          <li>
-            <DarkLightToogle />
-          </li>
-          <li>
+          </button>
+          <button>
+            <ToogleDarkLight />
+          </button>
+          <button>
             <Translate />
-          </li>
+          </button>
         </ul>
       </div>
     </nav>

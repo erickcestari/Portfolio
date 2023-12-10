@@ -5,10 +5,10 @@ const MySkills = () => {
   return (
     <div className="space-y-2">
       <p>
-        <span className="font-bold">{t('languages')}:</span> Javascript, Typescript, Python, C#, GML, Rust, GO, C#, SQL, HTML, CSS.
+        <span className="font-bold">{t('languages')}:</span> Javascript, Typescript, Python, C#, GML, Rust, GO, C#, SQL.
       </p>
       <p>
-        <span className="font-bold">{t('frameworks')}:</span> NextJS, NodeJS, Fastify, Express, NestJs, .NET, Gin TailwindCSS.
+        <span className="font-bold">{t('frameworks')}:</span> NextJS, Fastify, Express, NestJS, .NET, Gin.
       </p>
       <p>
         <span className="font-bold">{t('libraries')}:</span> React, Prisma, Zod, Axios, MUI.
@@ -17,7 +17,7 @@ const MySkills = () => {
         <span className="font-bold">{t('databases')}:</span> Postgres, MySql.
       </p>
       <p>
-        <span className="font-bold">{t('tools')}:</span> Git, gitlab, Docker, AWS, VSCode, Windows.
+        <span className="font-bold">{t('tools')}:</span> Git, Docker, AWS, Gitlab, Github, VSCode, Windows.
       </p>
       <p>
         <span className="font-bold">{t('hosting')}:</span> Vercel.

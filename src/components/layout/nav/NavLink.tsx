@@ -12,7 +12,7 @@ const NavLink = (props: NavLinkProps) => {
   const { href, name } = props
   const pathName = usePathname()
   return (
-    <Link href={href} className={`hover:text-blue-500 ${pathName === href && "text-blue-700"}`}>
+    <Link href={href} className={`dark:hover:text-zinc-400 hover:text-zinc-600  ${pathName === href && "dark:text-zinc-500 text-zinc-700"}`}>
       <p className="text-lg">
         {name}
       </p>

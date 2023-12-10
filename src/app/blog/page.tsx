@@ -25,7 +25,7 @@ export default async function Blog({
 
       <div className="flex flex-col gap-[1rem]">
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl">Articles</h2>
+          <h2 className="text-2xl">Σ Articles</h2>
           <span className="text-lg">{articles?.length} {articles?.length > 1 ? "articles" : "article"}</span>
         </div>
         <ArticlesList articlesData={articles} />

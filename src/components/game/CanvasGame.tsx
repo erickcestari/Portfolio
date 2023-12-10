@@ -61,7 +61,7 @@ const CanvasGame: React.FC<CanvasGameProps> = (props) => {
         window.cancelAnimationFrame(animationFrameId);
       };
     }
-  }, [draw]);
+  }, [draw, matrix.length]);
 
   return <canvas className='absolute top-0 left-0 -z-30' ref={canvasRef}/>;
 };

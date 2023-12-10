@@ -1,6 +1,6 @@
 "use client"
 
-;;import Link from "next/link"
+import Link from "next/link"
 import Contacts from "./Contacts"
 import MySkills from "./MySkills"
 import { useTranslation } from "react-i18next"
@@ -9,30 +9,30 @@ import { useState } from "react";
 import { PauseIcon, PlayIcon } from "@heroicons/react/20/solid";
 
 const AboutMe = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation()
   const [stopGame, setStopGame] = useState(false)
   return (
     <div className="md:p-4 lg:px-6 space-y-3 text-base">
-      <LifeGame stopGame={stopGame} />
-      <h1 className="text-2xl flex justify-between">
-        <p>
-        👋 {t('hiIm')} <span className="font-bold">Erick Cestari</span>.
-        </p>
-        <p className="text-lg flex justify-center items-center cursor-pointer" onClick={() => setStopGame(!stopGame)}>
+      <h1 className="text-2xl flex justify-between md:flex-row flex-col">
+        <div>
+          <div className="font-bold">👋 {t('hiIm')} Erick Cestari</div>
+        </div>
+        <LifeGame stopGame={stopGame} />
+        <div className="text-lg flex justify-center items-center cursor-pointer" onClick={() => setStopGame(!stopGame)}>
           {stopGame ? (
             <>
-              <PlayIcon className="h-6 w-6"/> {t('playConway')}
+              <PlayIcon className="h-6 w-6" /> {t('playConway')}
             </>
           ) : (
             <>
-              <PauseIcon className="h-6 w-6"/> {t('pauseConway')}
+              <PauseIcon className="h-6 w-6" /> {t('pauseConway')}
             </>
           )}
-        </p>
+        </div>
       </h1>
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {t('aboutMe')}</h1>
       <div className="space-y-2">
-          {t('aboutMeContent')}
+        {t('aboutMeContent')}
       </div>
       <h1 className="text-xl font-black  border-b-2 border-b-zinc-600">* {t('mySkills')}</h1>
       <MySkills />
