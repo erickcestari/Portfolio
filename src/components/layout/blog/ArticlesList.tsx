@@ -18,7 +18,6 @@ export const ArticlesList = ({ articlesData }: ArticlesListProps) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             whileHover={{ y: -5 }}
-            style={{ zIndex: `${article.id + 1}` }}
           >
             <ArticleCard {...article} />
           </motion.div>
