@@ -18,7 +18,7 @@ const AboutMe = () => {
           <div className="font-bold">👋 {t('hiIm')} Erick Cestari</div>
         </div>
         <LifeGame stopGame={stopGame} />
-        <div className="text-lg flex justify-center items-center cursor-pointer" onClick={() => setStopGame(!stopGame)}>
+        <div className="text-lg justify-center items-center cursor-pointer md:flex hidden" onClick={() => setStopGame(!stopGame)}>
           {stopGame ? (
             <>
               <PlayIcon className="h-6 w-6" /> {t('playConway')}
