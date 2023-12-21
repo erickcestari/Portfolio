@@ -1,5 +1,5 @@
 import { useTheme } from 'next-themes';
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 
 interface CanvasGameProps {
   matrix: number[][];
@@ -11,7 +11,7 @@ const CanvasGame: React.FC<CanvasGameProps> = (props) => {
 
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
-  const draw = (ctx: CanvasRenderingContext2D, size: number) => {
+  const draw = useCallback((ctx: CanvasRenderingContext2D, size: number) => {
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     const color = theme.theme === 'dark' ? '#333333' : '#cccccc';
 
@@ -23,11 +23,11 @@ const CanvasGame: React.FC<CanvasGameProps> = (props) => {
           ctx.fillStyle = color;
           ctx.fillRect(x * size, y * size, size, size);
         }
-          y++;
+        y++;
       }
       x++;
     }
-  };
+  }, [matrix, theme.theme]);
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -63,7 +63,7 @@ const CanvasGame: React.FC<CanvasGameProps> = (props) => {
     }
   }, [draw, matrix.length]);
 
-  return <canvas className='absolute top-0 left-0 -z-30' ref={canvasRef}/>;
+  return <canvas className='absolute top-0 left-0 -z-30' ref={canvasRef} />;
 };
 
 export default CanvasGame;
