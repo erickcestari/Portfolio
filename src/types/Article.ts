@@ -1,4 +1,5 @@
 import { Category } from "./Category";
+import { Language } from "./Language";
 
 export type Article = {
   id: number;
@@ -7,6 +8,7 @@ export type Article = {
   body: string;
   brief: string;
   categories: Category[];
+  language: Language;
   createdAt: string;
   updatedAt: string;
 };

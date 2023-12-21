@@ -10,10 +10,12 @@ export const articles: Article[] = [
     categories: [
       categories.find(({ title }) => title === "Javascript")!,
       categories.find(({ title }) => title === "ReactJS")!,
+      categories.find(({ title }) => title === "Portuguese")!
     ],
     topics: [
       "Meu primeiro artigo",
     ],
+    language: "pt-br",
     body: `my-mdx`,
     createdAt: "2023-11-15",
     updatedAt: "2023-11-15",

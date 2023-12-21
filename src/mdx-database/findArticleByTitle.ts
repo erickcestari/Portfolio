@@ -7,6 +7,8 @@ export const findArticleByTitle = (title: string) => {
     (article) => parseTitleHref(article.title) === title
   );
 
+  console.log(title)
+
   if (!article) return notFound();
 
   return { article };
