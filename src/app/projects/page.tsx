@@ -6,6 +6,7 @@ import useGithubRepositories from '@/hooks/useGithubRepositories'
 import { Pagination } from '@mui/material'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const username = 'erickcestari'
 const numberPerPage = 9
@@ -15,6 +16,7 @@ const Projects = () => {
   const [page, setPage] = useState(1)
   const [repositories, setRepositories] = useState(repositoriesData)
   const { theme } = useTheme()
+  const {t} = useTranslation()
 
   const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
@@ -29,7 +31,7 @@ const Projects = () => {
 
   return (
     <div className='space-y-2 font-mono'>
-      <h1 className='text-3xl font-bold'>λ Projects</h1>
+      <h1 className='text-3xl font-bold'>λ {t('Projects')}</h1>
       {loading && <SkeletonGithubRepositories />}
       {repositoriesData && repositories && (
         <div className='space-y-4'>
