@@ -34,7 +34,7 @@ const Translate = () => {
 
   return (
     <div className='flex w-20'>
-      <div
+      <button
         className='flex select-none hover:text-zinc-500 cursor-pointer'
         onClick={toggleLanguage}
         onKeyDown={(event) => {
@@ -48,7 +48,7 @@ const Translate = () => {
           className="w-6 h-6"
         />
         <p>{t('language')}</p>
-      </div>
+      </button>
     </div>
   );
 };

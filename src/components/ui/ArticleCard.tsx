@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { Article } from "@/types/Article";
-import { formatDate } from "@/utils/formatDate";
 import { parseTitleHref } from "@/utils/parseTitleHref";
+import FormatDate from "./FormatDate";
 
 export interface ArticleCardProps extends Omit<Article, "body"> {}
 
@@ -47,7 +47,7 @@ export const ArticleCard = ({
         </p>
 
         <div className="w-full flex items-center justify-between">
-          <span className="text-text2 text-sm">{formatDate(updatedAt)}</span>
+          <span className="text-text2 text-sm"><FormatDate date={updatedAt}/></span>
           <span className="text-text2 text-sm">{language.toLocaleUpperCase()}</span>
         </div>
       </li>

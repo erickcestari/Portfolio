@@ -19,6 +19,8 @@
   "pageGithub": "page",
   "contacts": "Contacts",
   "projects": "Projects",
+  "Projects": "Projects",
   "playConway": "Play Conway's Game of Life",
-  "pauseConway": "Pause Conway's Game of Life "
+  "pauseConway": "Pause Conway's Game of Life ",
+  "allRights": "All rights reserved"
 }

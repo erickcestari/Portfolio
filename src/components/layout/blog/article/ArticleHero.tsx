@@ -21,7 +21,7 @@ export const ArticleHero = ({ article }: ArticleHeroProps) => {
       </div>
       <div className="w-full flex justify-between text-right">
         <b className="text-lg text-text2 text-medium">
-          {formatDate(article.updatedAt)}
+          {formatDate(article.updatedAt, article.language)}
         </b>
       </div>
     </div>

@@ -19,9 +19,9 @@ const NavigationBar = () => {
           <button>
             <ToogleDarkLight />
           </button>
-          <button>
+          <div>
             <Translate />
-          </button>
+          </div>
         </ul>
       </div>
     </nav>
