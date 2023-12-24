@@ -22,7 +22,9 @@ export default async function Blog({
 
   return (
     <section className="flex flex-col gap-[2rem]">
-      <CategoriesList categoriesData={categories} />
+      <div className="mt-5">
+        <CategoriesList categoriesData={categories} />
+      </div>
 
       <div className="flex flex-col gap-[1rem]">
         <div className="flex justify-between items-center">

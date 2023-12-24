@@ -30,7 +30,7 @@ const Projects = () => {
 
 
   return (
-    <div className='space-y-2 font-mono'>
+    <div className='space-y-2 font-mono mt-5'>
       <h1 className='text-3xl font-bold'>λ {t('Projects')}</h1>
       {loading && <SkeletonGithubRepositories />}
       {repositoriesData && repositories && (
