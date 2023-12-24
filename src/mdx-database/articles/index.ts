@@ -4,20 +4,19 @@ import { categories } from "../categories";
 export const articles: Article[] = [
   {
     id: 1,
-    title: "Meu primeiro artigo",
+    title: "0.999... é Realmente Igual a 1?",
     brief:
-      "Neste Meu primeiro artigo 🦀",
+      "Explorando a fascinante equivalência entre 0.999... e 1 na matemática",
     categories: [
-      categories.find(({ title }) => title === "Javascript")!,
-      categories.find(({ title }) => title === "ReactJS")!,
-      categories.find(({ title }) => title === "Portuguese")!
+      categories.find(({ title }) => title === "Portuguese")!,
+      categories.find(({ title }) => title === "Mathematics")!
     ],
     topics: [
       "Meu primeiro artigo",
     ],
     language: "pt-br",
-    body: `my-mdx`,
-    createdAt: "2023-11-15",
-    updatedAt: "2023-11-15",
+    body: `0.999-igual-a-1`,
+    createdAt: "2023-12-24",
+    updatedAt: "2023-12-24",
   },
 ];

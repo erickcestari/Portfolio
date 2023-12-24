@@ -6,9 +6,9 @@ interface ArticleHeroProps {
 }
 export const ArticleHero = ({ article }: ArticleHeroProps) => {
   return (
-    <div className="w-full pt-[5rem] flex flex-col gap-[2.5rem] items-center justify-between border-b border-text2">
+    <div className="w-full pt-[5rem] flex flex-col gap-[2.5rem] items-center justify-between border-b dark:border-white border-black">
       <div className="w-full flex flex-col">
-        <h1>{article.title}</h1>
+        <h1 className="text-2xl">{article.title}</h1>
         <div className="flex gap-[1rem] flex-wrap">
           {article.categories.map(({ id, title }) => (
             <span
@@ -20,7 +20,7 @@ export const ArticleHero = ({ article }: ArticleHeroProps) => {
         </div>
       </div>
       <div className="w-full flex justify-between text-right">
-        <b className="text-lg text-text2 text-medium">
+        <b className="text-base">
           {formatDate(article.updatedAt, article.language)}
         </b>
       </div>

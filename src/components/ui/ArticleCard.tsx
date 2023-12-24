@@ -47,8 +47,8 @@ export const ArticleCard = ({
         </p>
 
         <div className="w-full flex items-center justify-between">
-          <span className="text-text2 text-sm"><FormatDate date={updatedAt}/></span>
-          <span className="text-text2 text-sm">{language.toLocaleUpperCase()}</span>
+          <span className="text-sm"><FormatDate date={updatedAt}/></span>
+          <span className="text-sm">{language.toLocaleUpperCase()}</span>
         </div>
       </li>
     </Link>
