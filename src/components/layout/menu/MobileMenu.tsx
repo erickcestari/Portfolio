@@ -1,6 +1,6 @@
 'use client'
 
-import { Bars4Icon } from '@heroicons/react/20/solid'
+import { Bars3Icon } from '@heroicons/react/20/solid'
 import React, { useEffect, useRef, useState } from 'react'
 import NavLink from '../nav/NavLink'
 import Translate from '../nav/Translate'
@@ -38,7 +38,7 @@ const MobileMenu = () => {
         className="lg:hidden px-2 flex items-center"
         onClick={toggleMenu}
       >
-        <Bars4Icon className="w-8" />
+        <Bars3Icon className="w-8 stroke-2" />
       </button>
       {isMenuOpen && (
         <div
@@ -51,7 +51,7 @@ const MobileMenu = () => {
             exit={{ opacity: 0 }}
           >
             <div
-              className="absolute top-0 right-0 w-56 p-4 z-10 space-y-3 dark:bg-zinc-700 bg-neutral-300"
+              className="absolute top-0 right-0 w-56 p-4 rounded-md z-10 space-y-3 dark:bg-zinc-700 bg-neutral-300"
               ref={menuRef}
             >
               <div onClick={closeMenu} className='flex flex-col space-y-3'>
