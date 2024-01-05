@@ -1,34 +1,26 @@
-"use client"
-
 import Link from "next/link"
 import Contacts from "./Contacts"
 import MySkills from "./MySkills"
-import { useTranslation } from "react-i18next"
 import LifeGame from "../game/LifeGame";
 import { useState } from "react";
 import { PauseIcon, PlayIcon } from "@heroicons/react/20/solid";
+import { useTranslation } from "@/i18n";
 
-const AboutMe = () => {
-  const { t } = useTranslation()
-  const [stopGame, setStopGame] = useState(false)
+type AboutMeProps = {
+  lng: string
+}
+
+const t = (s: string)  => s
+
+const AboutMe = async ({ lng }: AboutMeProps) => {
+
   return (
     <div className="md:p-4 lg:px-6 space-y-3 text-base">
       <h1 className="text-2xl flex justify-between md:flex-row flex-col">
         <div>
           <div className="font-bold">👋 {t('hiIm')} Erick Cestari</div>
         </div>
-        <LifeGame stopGame={stopGame} />
-        <div className="text-lg justify-center items-center cursor-pointer md:flex hidden" onClick={() => setStopGame(!stopGame)}>
-          {stopGame ? (
-            <>
-              <PlayIcon className="h-6 w-6" /> {t('playConway')}
-            </>
-          ) : (
-            <>
-              <PauseIcon className="h-6 w-6" /> {t('pauseConway')}
-            </>
-          )}
-        </div>
+        
       </h1>
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {t('aboutMe')}</h1>
       <div className="space-y-2">

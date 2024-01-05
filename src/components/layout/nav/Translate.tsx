@@ -5,8 +5,8 @@ import { LanguageIcon } from "@heroicons/react/24/solid";
 import { useTranslation, initReactI18next } from 'react-i18next';
 
 import i18n from 'i18next';
-import enTranslation from "@/translations/en.json"
-import ptTranslation from '@/translations/pt.json';
+import enTranslation from "@/i18n/locales/en/translation.json"
+import ptTranslation from '@/i18n/locales/pt/translation.json';
 
 i18n
   .use(initReactI18next)
