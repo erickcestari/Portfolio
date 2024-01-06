@@ -14,7 +14,7 @@ export const articles: Article[] = [
     topics: [
       "Meu primeiro artigo",
     ],
-    language: "pt-br",
+    language: "pt",
     body: `0.999-igual-a-1`,
     createdAt: "2023-12-24",
     updatedAt: "2023-12-24",

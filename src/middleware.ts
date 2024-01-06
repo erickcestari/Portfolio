@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import Negotiator from 'negotiator';
-import { locales } from "./dictionaries/locales/locales";
+import { locales } from "./dictionaries/locales";
 
 function getLocale(request: NextRequest) {
   const defaultLocale = 'en';

@@ -4,7 +4,6 @@ import './globals.css';
 import { ThemeProvider } from './theme-provider';
 import Footer from '@/components/layout/footer/Footer';
 import Menu from '@/components/layout/menu/Menu';
-import { locales } from '@/dictionaries/locales/locales';
 import { getDictionary } from '@/dictionaries/getDictionary';
 
 interface LangParamsType {
