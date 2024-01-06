@@ -1,14 +1,14 @@
-"use client"
+interface FooterProps {
+  textRights: string
+}
+const Footer = (footerProps: FooterProps) => {
+  const {textRights} = footerProps
 
-import { useTranslation } from "react-i18next";
-
-const Footer = () => {
-  const { t } = useTranslation()
   return (
     <div
       className="relative flex items-center justify-center pb-3 px-3 mt-1 text-center"
     >
-      © 2023 Erick Cestari. {t('allRights')}.
+      © 2023 Erick Cestari. {textRights}.
     </div>
   );
 };

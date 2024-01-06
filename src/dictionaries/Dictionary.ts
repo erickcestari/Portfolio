@@ -11,4 +11,15 @@ type DictionaryType = {
     contacts:string
     orAt: string
   }
+  mySkills: {
+    languages: string
+    frameworks: string
+    libraries: string
+    databases: string
+    tools: string
+    hosting: string
+  }
+  footer: {
+    textRights: string
+  }
 };

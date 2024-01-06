@@ -21,7 +21,7 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
         {aboutMe.aboutMeContent}
       </div>
       <h1 className="text-xl font-black  border-b-2 border-b-zinc-600">* {aboutMe.mySkills}</h1>
-      <MySkills />
+      <MySkills dic={aboutMeProps.dic}/>
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {aboutMe.experience}</h1>
       <div className="space-y-2">
         <p>
