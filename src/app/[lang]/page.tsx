@@ -1,7 +1,11 @@
 import AboutMe from "@/components/profile/AboutMe";
 import DisplayProfile from "@/components/profile/DisplayProfile";
+import { getDictionary } from "./dictionaries";
+import { LangType } from "@/types/params/Language";
 
-export default function Home() {
+export default async function Home({ params: { lang } }: LangType) {
+  const dic = await getDictionary(lang)
+  console.log(dic.products.cart)
   return (
     <div className='flex flex-col md:flex-row h-full space-x-2 space-y-2 mt-5'>
       <DisplayProfile />
