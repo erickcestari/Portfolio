@@ -16,7 +16,7 @@ export const ArticleCard = ({
   const hrefTitle = parseTitleHref(title);
 
   return (
-    <Link href={`/blog/${language}/${hrefTitle}`}>
+    <Link href={`/blog/${hrefTitle}`}>
       <li
         className="h-[16rem] w-full p-[1.25rem] text-left flex flex-col gap-[0.75rem] rounded-[1rem] 
         dark:bg-zinc-800

@@ -1,0 +1,29 @@
+{
+  "currentLanguage": "English",
+  "aboutMe": {
+    "hiIam": "Hi, I am",
+    "aboutMe": "About Me",
+    "aboutMeContent": "My programming journey began in 2020 and now I work as a FullStack developer. Initially, I was captivated by game development, diving into GML and Game Maker Studio 2. However, my path ended up taking me to the enchantment of web development, where I discovered a new world.",
+    "mySkills": "My Skills",
+    "experience": "Experience",
+    "experienceContent": "I have nine months of valuable experience as a FullStack developer, where I've had the opportunity to work on various projects and enhance my technical skills. My educational background aligns with my career aspirations as I am currently enrolled in the Information Systems program at Unifebe.",
+    "youCanView": "You can view my projects and contributions to open-source projects",
+    "here": "here",
+    "contacts": "Contacts",
+    "orAt": "or at"
+  },
+  "mySkills": {
+    "languages": "Languages",
+    "frameworks": "Frameworks",
+    "libraries": "Libraries",
+    "databases": "Databases",
+    "tools": "Tools",
+    "hosting": "Hosting"
+  },
+  "footer": {
+    "textRights": "All rights reserved"
+  },
+  "menu":{
+    "projects": "Projects"
+  }
+}

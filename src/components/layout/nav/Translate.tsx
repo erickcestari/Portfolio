@@ -1,35 +1,23 @@
 "use client"
 
-import React, { useState } from 'react';
 import { LanguageIcon } from "@heroicons/react/24/solid";
-import { useTranslation, initReactI18next } from 'react-i18next';
+import { usePathname, useRouter } from "next/navigation";
 
-import i18n from 'i18next';
-import enTranslation from "@/translations/en.json"
-import ptTranslation from '@/translations/pt.json';
+interface TranslateProps {
+  currentLanguage: string
+}
 
-i18n
-  .use(initReactI18next)
-  .init({
-    lng: 'en', // Idioma padrão
-    resources: {
-      en: {
-        translation: enTranslation,
-      },
-      pt: {
-        translation: ptTranslation,
-      },
-    },
-  });
+const Translate = (translateProps: TranslateProps) => {
+  const {currentLanguage} = translateProps
+  const router = useRouter()
+  const pathName = usePathname()
 
-const Translate = () => {
-  const { t, i18n } = useTranslation();
-  const [currentLanguage, setCurrentLanguage] = useState('en');
-
+  console.log(pathName)
   const toggleLanguage = () => {
-    const newLanguage = currentLanguage === 'en' ? 'pt' : 'en';
-    setCurrentLanguage(newLanguage);
-    i18n.changeLanguage(newLanguage);
+    const nextLanguage = currentLanguage == 'English' ? 'pt' : 'en'
+    const nextPath = pathName.replace('pt', nextLanguage).replace('en', nextLanguage)
+
+    router.push(nextPath)
   };
 
   return (
@@ -47,7 +35,7 @@ const Translate = () => {
         <LanguageIcon
           className="w-6 h-6"
         />
-        <p>{t('language')}</p>
+        <p>{currentLanguage}</p>
       </button>
     </div>
   );

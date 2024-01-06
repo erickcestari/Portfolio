@@ -21,6 +21,7 @@
     "framer-motion": "^10.16.5",
     "highlight.js": "^11.9.0",
     "i18next": "^23.5.1",
+    "negotiator": "^0.6.3",
     "next": "^14.0.2",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
@@ -31,6 +32,7 @@
     "tailwind-highlightjs": "^2.0.1"
   },
   "devDependencies": {
+    "@types/negotiator": "^0.6.3",
     "@tailwindcss/typography": "^0.5.10",
     "@types/node": "latest",
     "@types/react": "latest",

@@ -2,7 +2,13 @@ import ToogleDarkLight from './theme/ToogleDarkLight'
 import NavLink from './NavLink'
 import Translate from './Translate'
 
-const NavigationBar = () => {
+interface NavigationBarProps {
+  dic: DictionaryType
+}
+
+const NavigationBar = (navigationBarProps: NavigationBarProps) => {
+  const {dic} = navigationBarProps
+
   return (
     <nav className="z-10 md:block hidden">
       <div className="mx-auto flex justify-between items-center">
@@ -11,7 +17,7 @@ const NavigationBar = () => {
         </div>
         <ul className="flex space-x-4 text-black dark:text-white">
           <button>
-            <NavLink href="/projects" name="Projects" />
+            <NavLink href="/projects" name={dic.menu.projects} />
           </button>
           <button>
             <NavLink href="/blog" name="Blog" />
@@ -20,7 +26,7 @@ const NavigationBar = () => {
             <ToogleDarkLight />
           </button>
           <div>
-            <Translate />
+            <Translate currentLanguage={dic.currentLanguage} />
           </div>
         </ul>
       </div>
