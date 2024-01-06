@@ -1,4 +1,4 @@
-  export interface GithubProfileData {
+  export interface GithubProfileType {
   login: string;
   id: number;
   node_id: string;
