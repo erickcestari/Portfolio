@@ -8,6 +8,7 @@ interface NavigationBarProps {
 
 const NavigationBar = (navigationBarProps: NavigationBarProps) => {
   const {dic} = navigationBarProps
+
   return (
     <nav className="z-10 md:block hidden">
       <div className="mx-auto flex justify-between items-center">
@@ -25,7 +26,7 @@ const NavigationBar = (navigationBarProps: NavigationBarProps) => {
             <ToogleDarkLight />
           </button>
           <div>
-            <Translate />
+            <Translate currentLanguage={dic.currentLanguage} />
           </div>
         </ul>
       </div>

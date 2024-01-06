@@ -66,7 +66,7 @@ const MobileMenu = (mobileMenuProps: MobileMenuProps) => {
               </div>
               <div className='flex items-center justify-between'>
                 <ToogleDarkLight />
-                <Translate />
+                <Translate currentLanguage={dic.currentLanguage}/>
               </div>
             </div>
           </motion.div>

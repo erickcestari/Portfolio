@@ -1,10 +1,23 @@
 "use client"
 
 import { LanguageIcon } from "@heroicons/react/24/solid";
+import { usePathname, useRouter } from "next/navigation";
 
-const Translate = () => {
+interface TranslateProps {
+  currentLanguage: string
+}
+
+const Translate = (translateProps: TranslateProps) => {
+  const {currentLanguage} = translateProps
+  const router = useRouter()
+  const pathName = usePathname()
+
+  console.log(pathName)
   const toggleLanguage = () => {
+    const nextLanguage = currentLanguage == 'English' ? 'pt' : 'en'
+    const nextPath = pathName.replace('pt', nextLanguage).replace('en', nextLanguage)
 
+    router.push(nextPath)
   };
 
   return (
@@ -22,7 +35,7 @@ const Translate = () => {
         <LanguageIcon
           className="w-6 h-6"
         />
-        <p>{'language'}</p>
+        <p>{currentLanguage}</p>
       </button>
     </div>
   );
