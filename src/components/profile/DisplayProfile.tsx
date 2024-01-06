@@ -15,8 +15,12 @@ const DisplayProfile = () => {
       {loading && <SkeletonDisplayProfile />}
       {profileData && (
         <div className="select-none flex justify-center items-center flex-col md:items-start md:justify-normal">
-          <div className="w-72 h-72 md:h-64 md:w-64 rounded-full shadow-2xl">
-            <Image priority className="rounded-full" src={profileData.avatar_url} width={1000} height={1000} alt={`Github ${profileData.name} icon`} />
+          <div className="w-72 h-72 md:h-64 md:w-64 rounded-lg shadow-2xl">
+            <Image 
+            priority 
+            className="rounded-lg" 
+            src={profileData.avatar_url} width={300} height={300} 
+            alt={`Github ${profileData.name} icon`} />
           </div>
           <h1 className="text-lg">{profileData.name}</h1>
           <h2 className="text-sm text-neutral-400">{profileData.login}</h2>
