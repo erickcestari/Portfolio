@@ -2,7 +2,7 @@ import 'server-only';
 
 type DictionaryLoader<T> = () => Promise<T>;
 
-const dictionaries: Record<string, DictionaryLoader<any>> = {
+const dictionaries: Record<string, DictionaryLoader<DictionaryType>> = {
   en: () => import('../../dictionaries/en.json').then((module) => module.default),
   pt: () => import('../../dictionaries/pt.json').then((module) => module.default),
 };
