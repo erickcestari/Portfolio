@@ -1,4 +1,5 @@
 {
+  "currentLanguage": "en",
   "aboutMe": {
     "hiIam": "Hi, I am",
     "aboutMe": "About Me",
@@ -21,5 +22,8 @@
   },
   "footer": {
     "textRights": "All rights reserved"
+  },
+  "menu":{
+    "projects": "Projects"
   }
 }

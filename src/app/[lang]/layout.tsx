@@ -40,7 +40,7 @@ export default async function RootLayout({
       <body className={`${poppins.className} font-medium bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-gray-200  max-w-5xl p-4 mx-auto`}>
         <ThemeProvider attribute='class' defaultTheme="ligth" enableSystem>
           <main>
-            <Menu />
+            <Menu dic={dic} />
             {children}
             <Footer textRights={dic.footer.textRights}/>
           </main>

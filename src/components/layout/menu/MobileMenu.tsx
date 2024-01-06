@@ -7,7 +7,12 @@ import Translate from '../nav/Translate'
 import ToogleDarkLight from '../nav/theme/ToogleDarkLight'
 import { motion } from 'framer-motion'
 
-const MobileMenu = () => {
+interface MobileMenuProps {
+  dic: DictionaryType
+}
+
+const MobileMenu = (mobileMenuProps: MobileMenuProps) => {
+  const {dic} = mobileMenuProps
   const menuRef = useRef<HTMLDivElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -56,7 +61,7 @@ const MobileMenu = () => {
             >
               <div onClick={closeMenu} className='flex flex-col space-y-3'>
                 <NavLink href="/" name="Erick Cestari" />
-                <NavLink href="/projects" name="Projects" />
+                <NavLink href="/projects" name={dic.menu.projects} />
                 <NavLink href="/blog" name="Blog" />
               </div>
               <div className='flex items-center justify-between'>

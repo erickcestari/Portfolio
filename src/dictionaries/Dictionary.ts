@@ -1,4 +1,5 @@
 type DictionaryType = {
+  currentLanguage: string
   aboutMe: {
     hiIam: string
     aboutMe: string
@@ -21,5 +22,8 @@ type DictionaryType = {
   }
   footer: {
     textRights: string
+  }
+  menu:{
+    projects: string
   }
 };
