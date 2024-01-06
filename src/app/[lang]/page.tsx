@@ -1,6 +1,6 @@
 import AboutMe from "@/components/profile/AboutMe";
 import DisplayProfile from "@/components/profile/DisplayProfile";
-import { getDictionary } from "./dictionaries";
+import { getDictionary } from "@/dictionaries/getDictionary";
 import { LangType } from "@/types/params/Language";
 import { GithubProfileType } from "@/types/GithubProfileType";
 
