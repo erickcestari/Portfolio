@@ -36,7 +36,7 @@ export default async function RootLayout({
   const dic = await getDictionary(params.lang)
 
   return (
-    <html lang="en">
+    <html lang={dic.locale} suppressHydrationWarning>
       <body className={`${poppins.className} font-medium bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-gray-200  max-w-5xl p-4 mx-auto`}>
         <ThemeProvider attribute='class' defaultTheme="ligth" enableSystem>
           <main>

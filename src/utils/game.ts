@@ -8,10 +8,10 @@ export const createArray = (n: number) => {
   return array
 }
 
-export const createMatrix = (col: number, lin: number) => {
+export const createMatrix = (col: number, row: number) => {
   const matrix: number[][] = []
   for (let i = 0; i < col; i++) {
-    const arrayRandom = createArray(lin)
+    const arrayRandom = createArray(row)
     matrix.push(arrayRandom)
   }
 

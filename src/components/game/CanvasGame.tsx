@@ -37,10 +37,10 @@ const CanvasGame: React.FC<CanvasGameProps> = (props) => {
       if (context == null) {
         return;
       }
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
 
-      const size = context.canvas.width / matrix.length;
+      const defaultSize = matrix?.length ?? 1;
+
+      const size = context.canvas.width / defaultSize;
 
       let animationFrameId: number;
 
@@ -63,7 +63,7 @@ const CanvasGame: React.FC<CanvasGameProps> = (props) => {
     }
   }, [draw, matrix.length]);
 
-  return <canvas className='absolute top-0 left-0 -z-30' ref={canvasRef} />;
+  return <canvas className='fixed top-0 left-0 w-screen -z-30' ref={canvasRef} />;
 };
 
 export default CanvasGame;

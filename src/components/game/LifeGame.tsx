@@ -8,26 +8,38 @@ interface LifeGameProps {
 
 const LifeGame = (props: LifeGameProps) => {
   const { stopGame } = props;
-  const [matrix, setMatrix] = useState(createMatrix(250, 250));
-
+  const [matrix, setMatrix] = useState<number[][]>([]);
+  
   const playGame = () => {
     setMatrix((prevMatrix) => playCornwayGame(prevMatrix));
   };
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (!stopGame) {
-        playGame();
-      }
-    }, 100);
+    if (typeof window !== 'undefined') {
+      setMatrix(createMatrix(window.innerWidth / 5, window.innerHeight / 5));
+    }
+  }, []);
 
-    return () => clearInterval(intervalId);
+  useEffect(() => {
+    if (!stopGame) {
+      const intervalId = setInterval(() => {
+        if (!stopGame) {
+          playGame();
+        }
+      }, 100);
+      
+      return () => clearInterval(intervalId);
+    }
   }, [stopGame]);
 
   return (
-    <div>
-      <CanvasGame matrix={matrix} />
-    </div>
+    <>
+      {matrix && (
+        <div>
+          <CanvasGame matrix={matrix} />
+        </div>
+      )}
+    </>
   );
 };
 
