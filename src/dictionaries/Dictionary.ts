@@ -1,4 +1,5 @@
 type DictionaryType = {
+  locale: string
   currentLanguage: string
   aboutMe: {
     hiIam: string

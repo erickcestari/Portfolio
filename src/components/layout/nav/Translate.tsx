@@ -12,7 +12,6 @@ const Translate = (translateProps: TranslateProps) => {
   const router = useRouter()
   const pathName = usePathname()
 
-  console.log(pathName)
   const toggleLanguage = () => {
     const nextLanguage = currentLanguage == 'English' ? 'pt' : 'en'
     const nextPath = pathName.replace('pt', nextLanguage).replace('en', nextLanguage)

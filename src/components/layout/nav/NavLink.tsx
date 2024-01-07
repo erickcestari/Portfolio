@@ -1,25 +1,26 @@
 "use client"
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { useTranslation } from "react-i18next"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface NavLinkProps {
-  href: string
-  name: string
+  href: string;
+  name: string;
+  currentLocale: string;
 }
 
 const NavLink = (props: NavLinkProps) => {
-  const {t} = useTranslation()
-  const { href, name } = props
-  const pathName = usePathname()
+  const { href, name, currentLocale } = props;
+  const pathName = usePathname();
+  const hrefWithLocale = `/${currentLocale}${href}`
+
   return (
-    <Link href={href} className={`dark:hover:text-zinc-400 hover:text-zinc-600  ${pathName === href && "dark:text-zinc-500 text-zinc-700"}`}>
+    <Link href={hrefWithLocale} className={`dark:hover:text-zinc-400 hover:text-zinc-600  ${pathName === hrefWithLocale && "dark:text-zinc-500 text-zinc-700"}`}>
       <p className="text-lg">
-        {t(name)}
+        {name}
       </p>
     </Link>
-  )
-}
+  );
+};
 
-export default NavLink
+export default NavLink;

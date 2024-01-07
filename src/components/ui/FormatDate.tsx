@@ -1,16 +1,13 @@
-"use client"
-
 import { formatDate } from "@/utils/formatDate"
-import { useTranslation } from "react-i18next"
 
 interface DateFormatProps {
   date: string
+  language: string
 }
 
-function FormatDate({ date }: DateFormatProps) {
-  const { i18n } = useTranslation()
+function FormatDate({ date, language }: DateFormatProps) {
   return (
-    <div>{formatDate(date, i18n.language)}</div>
+    <div>{formatDate(date, language)}</div>
   )
 }
 
