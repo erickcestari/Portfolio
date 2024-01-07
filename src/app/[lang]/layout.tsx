@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import {  Fira_Code as firaCodeFont } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from './theme-provider';
 import Footer from '@/components/layout/footer/Footer';
@@ -10,7 +10,7 @@ interface LangParamsType {
   lang: string
 }
 
-const poppins = Poppins({ weight: ["400", "500", "700"], subsets: ["latin"] });
+const firaCode = firaCodeFont({ weight: ["400", "500", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Erick Cestari Portfolio',
@@ -37,7 +37,7 @@ export default async function RootLayout({
 
   return (
     <html lang={dic.locale} suppressHydrationWarning>
-      <body className={`${poppins.className} font-medium bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-gray-200  max-w-5xl p-4 mx-auto`}>
+      <body className={`${firaCode.className} font-medium bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-gray-200  max-w-5xl p-4 mx-auto`}>
         <ThemeProvider attribute='class' defaultTheme="ligth" enableSystem>
           <main>
             <Menu dic={dic} />
