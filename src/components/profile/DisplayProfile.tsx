@@ -4,9 +4,10 @@ import { GithubProfileType } from "@/types/GithubProfileType";
 
 interface DisplayProfileProps {
   profile: GithubProfileType
+  dic: DictionaryType
 }
 
-const DisplayProfile = ({profile}:DisplayProfileProps) => {
+const DisplayProfile = ({profile, dic}:DisplayProfileProps) => {
 
   return (
     <div>
@@ -26,8 +27,8 @@ const DisplayProfile = ({profile}:DisplayProfileProps) => {
           <p>{profile.location}</p>
         </div>
         <div className="flex text-xs space-x-16 mt-2">
-          <p>Followers: {profile.followers}</p>
-          <p>Following: {profile.following}</p>
+          <p>{dic.displayProfile.followers}: {profile.followers}</p>
+          <p>{dic.displayProfile.following}: {profile.following}</p>
         </div>
       </div>
     </div>

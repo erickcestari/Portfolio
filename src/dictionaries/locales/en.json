@@ -1,6 +1,10 @@
 {
   "locale": "en",
   "currentLanguage": "English",
+  "displayProfile": {
+    "followers": "Followers",
+    "following": "Following"
+  },
   "aboutMe": {
     "hiIam": "Hi, I am",
     "aboutMe": "About Me",

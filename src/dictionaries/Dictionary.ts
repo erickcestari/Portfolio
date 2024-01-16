@@ -1,6 +1,10 @@
 type DictionaryType = {
   locale: string
   currentLanguage: string
+  displayProfile: {
+    followers: string
+    following: string
+  }
   aboutMe: {
     hiIam: string
     aboutMe: string
