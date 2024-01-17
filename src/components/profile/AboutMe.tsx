@@ -11,13 +11,13 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
   const { dic: { aboutMe } } = aboutMeProps;
 
   return (
-    <div className="md:p-4 lg:px-6 space-y-3 text-base">
+    <div className="md:p-4 lg:px-6 space-y-2 text-base font-normal">
       <div className=" flex justify-between md:flex-row flex-col">
-        <h1 className="text-2xl font-bold">👋 {aboutMe.hiIam} Erick Cestari</h1>
+        <h1 className="text-2xl font-black">👋 {aboutMe.hiIam} Erick Cestari</h1>
         <GameDisplay />
       </div>
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {aboutMe.aboutMe}</h1>
-      <div className="space-y-2">
+      <div className="space-y-2 font-normal">
         {aboutMe.aboutMeContent}
       </div>
       <h1 className="text-xl font-black  border-b-2 border-b-zinc-600">* {aboutMe.mySkills}</h1>
