@@ -29,7 +29,7 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
         </p>
         <p>
           {aboutMe.youCanView}
-          <Link href="/projects" className="text-blue-700 hover:underline"> {aboutMe.here}</Link> {aboutMe.orAt} <Link href="https://github.com/erickcestari" target="_blank" className="text-blue-700 hover:underline">github</Link>.
+          <Link href="/projects" className="text-blue-600 font-bold hover:underline"> {aboutMe.here}</Link> {aboutMe.orAt} <Link href="https://github.com/erickcestari" target="_blank" className="text-blue-600 font-bold hover:underline">github</Link>.
         </p>
       </div>
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {aboutMe.contacts}</h1>
