@@ -15,7 +15,7 @@ const NavLink = (props: NavLinkProps) => {
   const hrefWithLocale = `/${currentLocale}${href}`
 
   return (
-    <Link href={hrefWithLocale} className={`dark:hover:text-zinc-400 hover:text-zinc-600  ${pathName === hrefWithLocale && "dark:text-zinc-500 text-zinc-700"}`}>
+    <Link href={hrefWithLocale} className={`dark:hover:text-zinc-400 hover:text-zinc-500  ${pathName === hrefWithLocale && "dark:text-zinc-500 text-zinc-500"}`}>
       <p className="text-lg">
         {name}
       </p>

@@ -13,7 +13,7 @@ const NavigationBar = (navigationBarProps: NavigationBarProps) => {
     <nav className="z-10 md:block hidden">
       <div className="mx-auto flex justify-between items-center">
         <div>
-          <NavLink href="/" name="Erick Cestari" currentLocale={dic.locale} />
+          <NavLink href="" name="Erick Cestari" currentLocale={dic.locale} />
         </div>
         <ul className="flex space-x-4 text-black dark:text-white">
           <button>

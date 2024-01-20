@@ -60,7 +60,7 @@ const MobileMenu = (mobileMenuProps: MobileMenuProps) => {
               ref={menuRef}
             >
               <div onClick={closeMenu} className='flex flex-col space-y-3'>
-                <NavLink href="/" name="Erick Cestari" currentLocale={dic.locale} />
+                <NavLink href="" name="Erick Cestari" currentLocale={dic.locale} />
                 <NavLink href="/projects" name={dic.menu.projects} currentLocale={dic.locale} />
                 <NavLink href="/blog" name="Blog" currentLocale={dic.locale} />
               </div>
