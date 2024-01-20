@@ -4,8 +4,8 @@ export const getLanguages = (dic: DictionaryType) => {
 
   const languages: Map<Language, string> = new Map();
 
-  languages.set('en', dic.en);
-  languages.set('pt', dic.pt);
+  languages.set('en', 'English');
+  languages.set('pt', 'Português');
 
   return languages
 }

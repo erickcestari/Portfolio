@@ -18,28 +18,20 @@ const MobileMenu = (mobileMenuProps: MobileMenuProps) => {
 
   return (
     <div className="flex justify-end flex-row md:hidden">
-      <Sheet open={status} onOpenChange={(val) =>setStatus(val) }>
+      <Sheet open={status} onOpenChange={(val) => setStatus(val)}>
         <SheetTrigger><Bars3Icon className="w-8 stroke-2" /></SheetTrigger>
         <SheetContent>
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
-            <SheetDescription className='flex flex-col items-start gap-2'>
-              <button onClick={() => setStatus(!status)}>
-                <NavLink href="/" name="Erick Cestari" currentLocale={dic.locale} />
-              </button>
-              <button onClick={() => setStatus(!status)}>
-
-                <NavLink href="/projects" name={dic.menu.projects} currentLocale={dic.locale} />
-              </button>
-              <button onClick={() => setStatus(!status)}>
-
-                <NavLink href="/blog" name="Blog" currentLocale={dic.locale} />
-              </button>
-            </SheetDescription>
-              <div className='flex items-center justify-between'>
-                <ToogleDarkLight />
-                <Translate currentLanguage={dic.currentLanguage} dic={dic} />
-              </div>
+            <div className='flex flex-col justify-start items-start gap-2'>
+                <NavLink href="/" name="Erick Cestari" currentLocale={dic.locale} full closeMenu={() => setStatus(false)}/>
+                <NavLink href="/projects" name={dic.menu.projects} currentLocale={dic.locale} full closeMenu={() => setStatus(false)}/>
+                <NavLink href="/blog" name="Blog" currentLocale={dic.locale} full closeMenu={() => setStatus(false)}/>
+            </div>
+            <div className='flex items-center justify-between'>
+              <ToogleDarkLight />
+              <Translate currentLanguage={dic.locale} dic={dic} />
+            </div>
           </SheetHeader>
         </SheetContent>
       </Sheet>

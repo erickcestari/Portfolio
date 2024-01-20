@@ -1,12 +1,12 @@
 "use client"
 
-import { DropdownMenuRadioGroup, DropdownMenuRadioItem } from "@radix-ui/react-dropdown-menu"
 import * as React from "react"
 
 import {
   DropdownMenu,
   DropdownMenuContent,
-
+  DropdownMenuRadioItem,
+  DropdownMenuRadioGroup,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { LanguageIcon } from "@heroicons/react/24/outline"
@@ -22,6 +22,7 @@ export function LanguageDropDown({ activeLang, languagesMap }: LanguageDropDownP
   const [language, setLanguage] = React.useState(activeLang)
   const pathName = usePathname()
   const router = useRouter()
+  console.log(activeLang)
 
   const handleChangeLanguage = (lang: string) => {
     setLanguage(lang)
