@@ -22,7 +22,6 @@ export function LanguageDropDown({ activeLang, languagesMap }: LanguageDropDownP
   const [language, setLanguage] = React.useState(activeLang)
   const pathName = usePathname()
   const router = useRouter()
-  console.log(activeLang)
 
   const handleChangeLanguage = (lang: string) => {
     setLanguage(lang)

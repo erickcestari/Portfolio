@@ -14,7 +14,6 @@ interface MobileMenuProps {
 const MobileMenu = (mobileMenuProps: MobileMenuProps) => {
   const { dic } = mobileMenuProps
   const [status, setStatus] = useState(false)
-  console.log(status)
 
   return (
     <div className="flex justify-end flex-row md:hidden">
