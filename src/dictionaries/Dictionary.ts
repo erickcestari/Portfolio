@@ -1,4 +1,6 @@
 type DictionaryType = {
+  en: string
+  pt: string
   locale: string
   currentLanguage: string
   displayProfile: {

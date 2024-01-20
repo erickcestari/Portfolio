@@ -3,18 +3,15 @@ import { getLanguages } from "@/utils/getLanguages";
 
 interface TranslateProps {
   currentLanguage: string
+  dic: DictionaryType
 }
 
 const Translate = (translateProps: TranslateProps) => {
-  const { currentLanguage } = translateProps
-
-  const languagesMap = getLanguages();
-  const languageKeys = Array.from(languagesMap.keys());
+  const { currentLanguage, dic } = translateProps
+  const languagesMap = getLanguages(dic);
 
   return (
-    <div className='flex w-20'>
-        <LanguageDropDown langs={languageKeys} activeLang={currentLanguage}/>
-    </div>
+        <LanguageDropDown languagesMap={languagesMap} activeLang={currentLanguage}/>
   );
 };
 

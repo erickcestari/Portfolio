@@ -1,24 +1,24 @@
 "use client"
 
-import * as React from "react"
 import { DropdownMenuRadioGroup, DropdownMenuRadioItem } from "@radix-ui/react-dropdown-menu"
+import * as React from "react"
 
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
+
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { usePathname, useRouter } from "next/navigation"
 import { LanguageIcon } from "@heroicons/react/24/outline"
+import { usePathname, useRouter } from "next/navigation"
+import { Language } from "@/types/Language"
 
 interface LanguageDropDownProps {
-  langs: string[]
+  languagesMap: Map<Language, string>
   activeLang: string
 }
 
-export function LanguageDropDown({ activeLang, langs }: LanguageDropDownProps) {
+export function LanguageDropDown({ activeLang, languagesMap }: LanguageDropDownProps) {
   const [language, setLanguage] = React.useState(activeLang)
   const pathName = usePathname()
   const router = useRouter()
@@ -40,10 +40,8 @@ export function LanguageDropDown({ activeLang, langs }: LanguageDropDownProps) {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 cursor-default">
-        <DropdownMenuLabel>Panel Language</DropdownMenuLabel>
-        <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={language} onValueChange={handleChangeLanguage}>
-          {langs.map(lang => <DropdownMenuRadioItem key={lang} value={lang}>{lang}</DropdownMenuRadioItem>)}
+          {Array.from(languagesMap.keys()).map(lang => <DropdownMenuRadioItem key={lang} value={lang}>{languagesMap.get(lang)}</DropdownMenuRadioItem>)}
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>

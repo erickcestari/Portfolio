@@ -5,73 +5,45 @@ import React, { useEffect, useRef, useState } from 'react'
 import NavLink from '../nav/NavLink'
 import Translate from '../nav/Translate'
 import ToogleDarkLight from '../nav/theme/ToogleDarkLight'
-import { motion } from 'framer-motion'
+import { SheetTrigger, Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription, SheetClose } from '@/components/ui/sheet'
 
 interface MobileMenuProps {
   dic: DictionaryType
 }
 
 const MobileMenu = (mobileMenuProps: MobileMenuProps) => {
-  const {dic} = mobileMenuProps
-  const menuRef = useRef<HTMLDivElement>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        closeMenu();
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [menuRef]);
+  const { dic } = mobileMenuProps
+  const [status, setStatus] = useState(false)
+  console.log(status)
 
   return (
     <div className="flex justify-end flex-row md:hidden">
-      <button
-        className="lg:hidden px-2 flex items-center"
-        onClick={toggleMenu}
-      >
-        <Bars3Icon className="w-8 stroke-2" />
-      </button>
-      {isMenuOpen && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50"
-        >
-          <motion.div
-            layout
-            initial={{ opacity: 0, x:15}}
-            animate={{ opacity: 1, x:0}}
-            exit={{ opacity: 0 }}
-          >
-            <div
-              className="absolute top-0 right-0 w-56 p-4 rounded-md z-10 space-y-3 dark:bg-zinc-700 bg-neutral-300"
-              ref={menuRef}
-            >
-              <div onClick={closeMenu} className='flex flex-col space-y-3'>
+      <Sheet open={status} onOpenChange={(val) =>setStatus(val) }>
+        <SheetTrigger><Bars3Icon className="w-8 stroke-2" /></SheetTrigger>
+        <SheetContent>
+          <SheetHeader>
+            <SheetTitle>Menu</SheetTitle>
+            <SheetDescription className='flex flex-col items-start gap-2'>
+              <button onClick={() => setStatus(!status)}>
                 <NavLink href="/" name="Erick Cestari" currentLocale={dic.locale} />
+              </button>
+              <button onClick={() => setStatus(!status)}>
+
                 <NavLink href="/projects" name={dic.menu.projects} currentLocale={dic.locale} />
+              </button>
+              <button onClick={() => setStatus(!status)}>
+
                 <NavLink href="/blog" name="Blog" currentLocale={dic.locale} />
-              </div>
+              </button>
+            </SheetDescription>
               <div className='flex items-center justify-between'>
                 <ToogleDarkLight />
-                <Translate currentLanguage={dic.currentLanguage}/>
+                <Translate currentLanguage={dic.currentLanguage} dic={dic} />
               </div>
-            </div>
-          </motion.div>
-        </div>
-      )}
+          </SheetHeader>
+        </SheetContent>
+      </Sheet>
+
     </div>
   )
 }

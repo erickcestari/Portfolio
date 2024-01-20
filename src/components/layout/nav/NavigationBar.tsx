@@ -26,7 +26,7 @@ const NavigationBar = (navigationBarProps: NavigationBarProps) => {
             <ToogleDarkLight />
           </button>
           <div>
-            <Translate currentLanguage={dic.currentLanguage} />
+            <Translate currentLanguage={dic.currentLanguage} dic={dic}/>
           </div>
         </ul>
       </div>
