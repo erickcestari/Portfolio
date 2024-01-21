@@ -30,6 +30,10 @@ type DictionaryType = {
   footer: {
     textRights: string
   }
+  projects: {
+    language: string
+    viewOnGithub: string
+  },
   menu:{
     projects: string
   }

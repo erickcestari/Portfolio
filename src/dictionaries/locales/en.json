@@ -30,6 +30,10 @@
   "footer": {
     "textRights": "All rights reserved"
   },
+  "projects": {
+    "language": "Language",
+    "viewOnGithub": "View on github"
+  },
   "menu":{
     "projects": "Projects"
   }

@@ -28,6 +28,10 @@
     "tools": "Ferramentas",
     "hosting": "Hospedagem"
   },
+  "projects": {
+    "language": "Linguagem",
+    "viewOnGithub": "Ver no github"
+  },
   "footer": {
     "textRights": "Todos os direitos reservados"
   },
