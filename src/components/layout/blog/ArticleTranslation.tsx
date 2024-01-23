@@ -1,15 +1,13 @@
-"use client"
-
 import { articles } from '@/mdx-database/articles'
-import React from 'react'
-import { useTranslation } from 'react-i18next'
-
-const ArticleTranslation = () => {
-  const { t } = useTranslation()
+interface ArticleTranslationProps {
+  dic: DictionaryType
+}
+const ArticleTranslation = (props: ArticleTranslationProps) => {
+  const { dic } = props
   return (
     <>
-      <h2 className="text-2xl">Σ {t('article')}s</h2>
-      <span className="text-lg">{articles?.length} {articles?.length > 1 ? t('article') + 's' : t('article')}</span>
+      <h2 className="text-2xl">Σ {dic.blog.articles}</h2>
+      <span className="text-lg">{articles?.length} {articles?.length > 1 ? dic.blog.articles.toLowerCase() : dic.blog.articles.toLowerCase().slice(0, -1)}</span>
     </>
   )
 }

@@ -37,5 +37,8 @@
   },
   "menu":{
     "projects": "Projetos"
+  },
+  "blog": {
+    "articles": "Artigos"
   }
 }

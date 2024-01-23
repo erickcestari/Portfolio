@@ -36,5 +36,8 @@ type DictionaryType = {
   },
   menu:{
     projects: string
+  },
+  blog: {
+    articles: string
   }
 };
