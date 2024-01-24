@@ -22,14 +22,22 @@ export const CategoriesList = ({ categoriesData }: CategoriesListProps) => {
                 key={id}
                 onClick={() => handleParamValue(title)}
                 className={`
-                hover:invert
-                dark:bg-zinc-300
-                dark:text-zinc-800 
-                bg-zinc-800 
-                text-zinc-300
                 p-2
                 rounded-md
-                ${searchParamsHook.get("categories")?.split(",").some((category: string) => category === title) ? "invert" : null}
+                transition-colors
+                ${searchParamsHook.get("categories")?.split(",").some((category: string) => category === title) ? 
+                `dark:bg-zinc-800 
+                dark:text-zinc-300 
+                bg-zinc-300 
+                text-zinc-800` : 
+                `dark:hover:bg-zinc-800 
+                dark:hover:text-zinc-300
+                dark:bg-zinc-300
+                dark:text-zinc-800 
+                hover:bg-zinc-300
+                hover:text-zinc-800 
+                bg-zinc-800 
+                text-zinc-300`}
               `}
               >
                 {title}

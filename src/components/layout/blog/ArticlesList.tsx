@@ -2,6 +2,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { ArticleCard } from "@/components/ui/ArticleCard";
 import { Article } from "@/types/Article";
+import FadeInMotion from "@/components/animation/FadeInMotion";
 
 interface ArticlesListProps {
   articlesData: Article[];
@@ -11,16 +12,9 @@ export const ArticlesList = ({ articlesData }: ArticlesListProps) => {
     <div className="grid grid-cols-1 tablet:grid-cols-2 gap-[1rem]">
       {articlesData?.map(({ ...article }) => (
         <AnimatePresence key={article.id}>
-          <motion.div
-            key={article.id}
-            layout
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            whileHover={{ y: -5 }}
-          >
+          <FadeInMotion key={article.id} props={{layout: true}}>
             <ArticleCard {...article} />
-          </motion.div>
+          </FadeInMotion>
         </AnimatePresence>
       ))}
     </div>
