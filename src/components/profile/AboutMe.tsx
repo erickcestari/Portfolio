@@ -2,6 +2,7 @@ import Link from "next/link"
 import Contacts from "./Contacts"
 import MySkills from "./MySkills"
 import GameDisplay from "./GameDisplay"
+import HandAnimate from "./HandAnimate"
 
 interface AboutMeProps {
   dic: DictionaryType
@@ -13,7 +14,7 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
   return (
     <div className="md:p-4 lg:px-6 space-y-2 text-base font-normal">
       <div className=" flex justify-between md:flex-row flex-col">
-        <h1 className="text-2xl font-black">👋 {aboutMe.hiIam} Erick Cestari</h1>
+        <h1 className="text-2xl font-black flex gap-2"><HandAnimate /> {aboutMe.hiIam} Erick Cestari</h1>
         <GameDisplay />
       </div>
       <h1 className="text-xl font-black border-b-2 border-b-zinc-600">* {aboutMe.aboutMe}</h1>

@@ -17,7 +17,7 @@ const NavLink = (props: NavLinkProps) => {
   const hrefWithLocale = `/${currentLocale}${href}`
 
   return (
-    <Link href={hrefWithLocale} onClick={() => closeMenu && closeMenu()} className={`dark:hover:text-zinc-400 hover:text-zinc-500 ${full && "w-full"} ${pathName === hrefWithLocale && "dark:text-zinc-500 text-zinc-500"}`}>
+    <Link href={hrefWithLocale} onClick={() => closeMenu && closeMenu()} className={`dark:hover:text-zinc-400 hover:text-zinc-500 transition-colors ${full && "w-full"} ${pathName === hrefWithLocale && "dark:text-zinc-500 text-zinc-500"}`}>
       <p className="text-lg">
         {name}
       </p>
