@@ -104,3 +104,29 @@
     @apply prose-code:bg-[#040109] prose-code:border prose-code:border-slate-800 prose-code:py-1 prose-code:rounded-md;
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.animate-fadeOut {
+  animation: fadeOut 0.5s ease-in-out forwards;
+}
