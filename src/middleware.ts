@@ -17,7 +17,7 @@ export function middleware(request: NextRequest) {
   if (pathname.includes('svg')) return;
   
   const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    (locale) => pathname.startsWith(`/${locale}`)
     );
     
   if (pathnameHasLocale) return;
