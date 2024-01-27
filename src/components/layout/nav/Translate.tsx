@@ -11,7 +11,7 @@ const Translate = (translateProps: TranslateProps) => {
   const languagesMap = getLanguages(dic);
 
   return (
-        <LanguageDropDown languagesMap={languagesMap} activeLang={currentLanguage}/>
+    <LanguageDropDown languagesMap={languagesMap} activeLang={currentLanguage} />
   );
 };
 
