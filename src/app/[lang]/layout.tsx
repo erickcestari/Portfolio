@@ -38,8 +38,8 @@ export default async function RootLayout({
 
   return (
     <html lang={dic.locale} suppressHydrationWarning>
-      <body className={`${firaCode.className} font-medium bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-gray-200`}>
-        <ThemeProvider attribute='class' defaultTheme="ligth" enableSystem>
+      <body className={`${firaCode.className} font-medium bg-background text-accent-foreground`}>
+        <ThemeProvider attribute='class' defaultTheme="light" enableSystem>
           <main className='mx-auto max-w-5xl p-4 transition-colors cursor-default'>
             <FadeIn>
               <Menu dic={dic} />

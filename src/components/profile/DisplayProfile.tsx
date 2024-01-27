@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { MapPinIcon } from "@heroicons/react/20/solid";
 import { GithubProfileType } from "@/types/GithubProfileType";
+import { MapPinIcon } from "@heroicons/react/24/outline";
 
 interface DisplayProfileProps {
   profile: GithubProfileType
@@ -21,10 +21,10 @@ const DisplayProfile = ({ profile, dic }: DisplayProfileProps) => {
         </div>
         <div>
           <h1 className="text-lg">{profile.name}</h1>
-          <h2 className="text-sm text-neutral-400">{profile.login}</h2>
+          <h2 className="text-sm">{profile.login}</h2>
           <p className="text-xs">{profile.bio}</p>
         </div>
-        <div className="flex items-center text-sm text-neutral-400">
+        <div className="flex items-center text-sm">
           <MapPinIcon className="w-4 h-4" />
           <p>{profile.location}</p>
         </div>
