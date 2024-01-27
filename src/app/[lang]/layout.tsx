@@ -5,7 +5,7 @@ import { ThemeProvider } from './theme-provider';
 import Footer from '@/components/layout/footer/Footer';
 import Menu from '@/components/layout/menu/Menu';
 import { getDictionary } from '@/dictionaries/getDictionary';
-import FadeInMotion from '@/components/animation/FadeInMotion';
+import FadeIn from '@/components/animation/FadeIn';
 
 interface LangParamsType {
   lang: string
@@ -41,11 +41,11 @@ export default async function RootLayout({
       <body className={`${firaCode.className} font-medium bg-gray-200 dark:bg-zinc-900 text-zinc-900 dark:text-gray-200`}>
         <ThemeProvider attribute='class' defaultTheme="ligth" enableSystem>
           <main className='mx-auto max-w-5xl p-4 transition-colors cursor-default'>
-            <FadeInMotion>
+            <FadeIn>
               <Menu dic={dic} />
               {children}
               <Footer textRights={dic.footer.textRights} />
-            </FadeInMotion>
+            </FadeIn>
           </main>
         </ThemeProvider>
       </body>
