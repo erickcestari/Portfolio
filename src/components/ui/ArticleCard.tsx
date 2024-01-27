@@ -19,8 +19,9 @@ export const ArticleCard = ({
     <Link href={`/blog/${hrefTitle}`}>
       <li
         className="h-[16rem] w-full p-[1.25rem] text-left flex flex-col gap-[0.75rem] rounded-[1rem] 
-        dark:bg-zinc-800
-        bg-zinc-300
+        transition-colors
+        bg-secondary
+        hover:bg-primary-foreground
         "
       >
         <h2 className="text-2xl">{title}</h2>
@@ -32,8 +33,7 @@ export const ArticleCard = ({
               p-1
               rounded-md
               border-2
-              dark:border-zinc-400
-              border-zinc-800
+              border-primary
               `}
               key={id}
             >

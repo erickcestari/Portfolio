@@ -26,18 +26,14 @@ export const CategoriesList = ({ categoriesData }: CategoriesListProps) => {
                 rounded-md
                 transition-colors
                 ${searchParamsHook.get("categories")?.split(",").some((category: string) => category === title) ? 
-                `dark:bg-zinc-800 
-                dark:text-zinc-300 
-                bg-zinc-300 
-                text-zinc-800` : 
-                `dark:hover:bg-zinc-800 
-                dark:hover:text-zinc-300
-                dark:bg-zinc-300
-                dark:text-zinc-800 
-                hover:bg-zinc-300
-                hover:text-zinc-800 
-                bg-zinc-800 
-                text-zinc-300`}
+                ` 
+                bg-secondary-foreground 
+                text-secondary` : 
+                `
+                hover:bg-secondary-foreground
+                hover:text-secondary 
+                bg-primary-foreground 
+                text-primary`}
               `}
               >
                 {title}
