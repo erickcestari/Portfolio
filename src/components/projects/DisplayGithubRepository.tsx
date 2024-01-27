@@ -19,7 +19,7 @@ const DisplayGithubRepository = (props: DisplayGithubRepositoryProps) => {
             <p>{githubRepository.stargazers_count}</p>
           </div>
         </div>
-        <p className="text-gray-600 text-md mt-2 dark:text-zinc-300">
+        <p className="text-secondary-foreground opacity-90 text-md mt-2">
           {`${githubRepository.description && githubRepository.description.length > 50 ? githubRepository.description.slice(0, 50).concat("...") : githubRepository.description}`}
         </p>
         <div className="mt-4">
