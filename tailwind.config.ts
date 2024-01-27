@@ -14,13 +14,6 @@ const config: Config = {
     },
   ],
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       borderRadius: {
         lg: "var(--radius)",
@@ -42,16 +35,10 @@ const config: Config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       colors: {
-        accent2: "#8459FF",
-        accent3: "#7140FF",
         text1: "#FFFFFF",
         text2: "#99A2FF",
-        background1: "#080313",
-        background2: "#140B27",
         background3: "#251448",
         attention: "#CEFF40",
-        info: "#40FFD1",
-        danger: "#FF406E",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
