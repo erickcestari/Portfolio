@@ -10,7 +10,7 @@ interface DisplayGithubRepositoryProps {
 const DisplayGithubRepository = (props: DisplayGithubRepositoryProps) => {
   const { githubRepository, dic } = props
   return (
-    <div className="shadow-md rounded-lg p-4 bg-secondary text-secondary-foreground flex flex-col justify-between max-h-60 overflow-hidden">
+    <div className="shadow-md rounded-lg transition-colors p-4 bg-secondary text-secondary-foreground flex flex-col justify-between max-h-60 overflow-hidden">
       <div>
         <div className="flex flex-row justify-between">
           <h2 className="text-xl font-semibold">{githubRepository.name}</h2>

@@ -102,7 +102,7 @@ const config: Config = {
       },
     },
     hljs: {
-      theme: "github-dark",
+      theme: "panda-syntax-dark",
     },
   },
   plugins: [
