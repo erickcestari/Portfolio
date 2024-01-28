@@ -7,6 +7,7 @@ import Footer from '@/components/layout/footer/Footer';
 import Menu from '@/components/layout/menu/Menu';
 import { getDictionary } from '@/dictionaries/getDictionary';
 import FadeIn from '@/components/animation/FadeIn';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 interface LangParamsType {
   lang: string
@@ -39,6 +40,7 @@ export default async function RootLayout({
 
   return (
     <html lang={dic.locale} suppressHydrationWarning>
+      <SpeedInsights />
       <body className={`${firaCode.className} font-medium bg-background text-accent-foreground`}>
         <ThemeProvider attribute='class' defaultTheme="light" enableSystem>
           <main className='mx-auto max-w-5xl p-4 transition-colors cursor-default'>
