@@ -93,11 +93,16 @@
   }
 }
 
+.katex {
+  @apply bg-secondary p-1 rounded shadow-lg
+
+}
+
 @layer components {
   .article-body {
     @apply prose prose-lg text-primary prose-invert prose-purple;
 
-    @apply prose-p:font-medium prose-p:break-words  prose-h2:text-attention prose-a:text-attention prose-quoteless;
+    @apply prose-p:font-medium prose-p:break-words  prose-h2:text-primary prose-h2:font-bold prose-h2:border-b-4 prose-h2:border-dotted prose-h2:pb-2 prose-h2:border-amber-500 prose-h2:mt-10;
 
     @apply prose-pre:mt-0 prose-pre:p-0 prose-pre:rounded-lg prose-strong;
 
