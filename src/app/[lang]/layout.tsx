@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Fira_Code as firaCodeFont } from 'next/font/google';
 import '../globals.css';
+import 'katex/dist/katex.min.css';
 import { ThemeProvider } from './theme-provider';
 import Footer from '@/components/layout/footer/Footer';
 import Menu from '@/components/layout/menu/Menu';
