@@ -3,15 +3,16 @@ import { getDictionary } from '@/dictionaries/getDictionary'
 import { GithubProfileType } from '@/types/GithubProfileType'
 import { GithubRepository } from '@/types/GithubRepositories'
 import { LangType } from '@/types/params/Language'
+import { githubAuthorization } from '@/api/github'
 
 const username = 'erickcestari'
 
 const Projects = async ({ params: { lang } }: LangType) => {
   const dic = await getDictionary(lang)
-  const response = await fetch(`https://api.github.com/users/${username}`)
+  const response = await fetch(`https://api.github.com/users/${username}`, githubAuthorization)
   const dataProfile: GithubProfileType = await response.json()
   const url = dataProfile.repos_url + "?per_page=100";
-  const responseRepos = await fetch(url);
+  const responseRepos = await fetch(url, githubAuthorization);
   const githubRepository = await responseRepos.json() as GithubRepository[]
 
   return (

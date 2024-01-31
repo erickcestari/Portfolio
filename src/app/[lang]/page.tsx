@@ -3,12 +3,13 @@ import DisplayProfile from "@/components/profile/DisplayProfile";
 import { getDictionary } from "@/dictionaries/getDictionary";
 import { LangType } from "@/types/params/Language";
 import { GithubProfileType } from "@/types/GithubProfileType";
+import { githubAuthorization } from "@/api/github";
 
 const username = "erickcestari"
 
 export default async function Home({ params: { lang } }: LangType) {
   const dic = await getDictionary(lang)
-  const response = await fetch(`https://api.github.com/users/${username}`)
+  const response = await fetch(`https://api.github.com/users/${username}`, githubAuthorization)
   const dataProfile: GithubProfileType = await response.json()
 
   return (
