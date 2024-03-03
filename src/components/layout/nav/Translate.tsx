@@ -7,8 +7,8 @@ interface TranslateProps {
 }
 
 const Translate = (translateProps: TranslateProps) => {
-  const { currentLanguage, dic } = translateProps
-  const languagesMap = getLanguages(dic);
+  const { currentLanguage } = translateProps
+  const languagesMap = getLanguages();
 
   return (
     <LanguageDropDown languagesMap={languagesMap} activeLang={currentLanguage} />
