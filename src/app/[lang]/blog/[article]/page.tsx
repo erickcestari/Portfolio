@@ -42,7 +42,7 @@ export async function generateMetadata({
       description: article?.brief,
     },
     openGraph: {
-      url: "https://erick-cestari-portfolio.vercel.app",
+      url: "https://erickcestari.vercel.app",
       images: [`/cover/${article.body}.png`],
       title: article.title,
       description: article.brief,

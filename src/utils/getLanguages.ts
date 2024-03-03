@@ -1,6 +1,6 @@
 import { Language } from "@/types/Language"
 
-export const getLanguages = (dic: DictionaryType) => {
+export const getLanguages = () => {
 
   const languages: Map<Language, string> = new Map();
 

@@ -14,14 +14,14 @@ function getLocale(request: NextRequest) {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  if (pathname.endsWith('svg') || pathname.startsWith("/cover") ) return;
-  
+  if (pathname.endsWith('svg') || pathname.startsWith("/cover") || pathname.endsWith('.xml')) return;
+
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}`)
-    );
-    
+  );
+
   if (pathnameHasLocale) return;
-    
+
   const locale = getLocale(request);
   request.nextUrl.pathname = `/${locale}${pathname}`;
 
