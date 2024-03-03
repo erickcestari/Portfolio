@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { Language } from '@/types/Language'
 import { getLanguages } from '@/utils/getLanguages';
 import { articles } from '@/mdx-database/articles';
+import { parseTitleHref } from '@/utils/parseTitleHref';
 
 type PageMap = {
   url: string;
@@ -58,7 +59,7 @@ const makeUrlMap = () => {
     priority: 0.5,
   }));
   articles?.map((article) => {
-    const url = `https://erickcestari.vercel.app/blog/${article.title}`;
+    const url = `https://erickcestari.vercel.app/blog/${parseTitleHref(article.title)}`;
     urlMap.push(...addLanguage({
       url,
       lastModified: new Date(),
