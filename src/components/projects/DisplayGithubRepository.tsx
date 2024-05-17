@@ -1,6 +1,7 @@
 import { GithubRepository } from "@/types/GithubRepositories"
 import { StarIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
+import StyledLink from "../ui/StyledLink"
 
 interface DisplayGithubRepositoryProps {
   githubRepository: GithubRepository
@@ -15,7 +16,7 @@ const DisplayGithubRepository = (props: DisplayGithubRepositoryProps) => {
         <div className="flex flex-row justify-between">
           <h2 className="text-xl font-semibold">{githubRepository.name}</h2>
           <div className="text-primary flex justify-center items-center space-x-1">
-            <StarIcon height={17}/> 
+            <StarIcon height={17} />
             <p>{githubRepository.stargazers_count}</p>
           </div>
         </div>
@@ -27,14 +28,12 @@ const DisplayGithubRepository = (props: DisplayGithubRepositoryProps) => {
         </div>
       </div>
       <div className="mt-2">
-        <Link
+        <StyledLink
           href={githubRepository.html_url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 font-bold hover:underline"
+          blank
         >
           {dic.projects.viewOnGithub}
-        </Link>
+        </StyledLink>
       </div>
     </div>
   )

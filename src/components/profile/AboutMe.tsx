@@ -3,6 +3,7 @@ import Contacts from "./Contacts"
 import MySkills from "./MySkills"
 import GameDisplay from "./GameDisplay"
 import HandAnimate from "./HandAnimate"
+import StyledLink from "../ui/StyledLink"
 
 interface AboutMeProps {
   dic: DictionaryType
@@ -22,7 +23,7 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
         {aboutMe.aboutMeContent}
       </div>
       <h1 className="text-xl font-black  border-b-2 border-stone-600">* {aboutMe.mySkills}</h1>
-      <MySkills dic={aboutMeProps.dic}/>
+      <MySkills dic={aboutMeProps.dic} />
       <h1 className="text-xl font-black border-b-2 border-stone-600">* {aboutMe.experience}</h1>
       <div className="space-y-2">
         <p>
@@ -30,13 +31,13 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
         </p>
         <p>
           {aboutMe.youCanView}
-          <Link href="/projects" className="text-blue-500 font-bold hover:underline"> {aboutMe.here}</Link> {aboutMe.orAt} <Link href="https://github.com/erickcestari" target="_blank" className="text-blue-500 font-bold hover:underline">github</Link>.
+          <StyledLink href="/projects"> {aboutMe.here}</StyledLink> {aboutMe.orAt} <StyledLink href="https://github.com/erickcestari" blank>github</StyledLink>.
         </p>
       </div>
       <h1 className="text-xl font-black border-b-2 border-stone-600">* {aboutMe.contacts}</h1>
       <div className="flex space-x-4">
-        <Contacts title="Github" url="https://github.com/erickcestari" src="github.svg" />
-        <Contacts title="Linkedin" url="https://www.linkedin.com/in/erick-cestari" src="linkedin.svg" />
+        <Contacts title="Github" url="https://github.com/erickcestari" src="/github.svg" />
+        <Contacts title="Linkedin" url="https://www.linkedin.com/in/erick-cestari" src="/linkedin.svg" />
       </div>
     </div>
   )

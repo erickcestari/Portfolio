@@ -7,7 +7,7 @@ import Footer from '@/components/layout/footer/Footer';
 import Menu from '@/components/layout/menu/Menu';
 import { getDictionary } from '@/dictionaries/getDictionary';
 import FadeIn from '@/components/animation/FadeIn';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 interface LangParamsType {
   lang: string
@@ -36,20 +36,23 @@ export default async function RootLayout({
   children: React.ReactNode
   params: LangParamsType
 }>) {
-  const dic = await getDictionary(params.lang)
+  const dic = await getDictionary(params.lang);
 
   return (
     <html lang={dic.locale} suppressHydrationWarning>
       <SpeedInsights />
       <body className={`${firaCode.className} font-medium bg-background text-primary`}>
         <ThemeProvider attribute='class' defaultTheme="light" enableSystem>
-          <main className='mx-auto max-w-5xl p-4 transition-colors cursor-default'>
-            <FadeIn>
-              <Menu dic={dic} />
-              {children}
-              <Footer textRights={dic.footer.textRights} />
-            </FadeIn>
+          <main className='flex flex-col justify-between mx-auto max-w-5xl p-4 pb-0 transition-colors cursor-default min-h-screen'>
+            <div>
+              <FadeIn>
+                <Menu dic={dic} />
+                {children}
+              </FadeIn>
+            </div>
+            <Footer textRights={dic.footer.textRights} />
           </main>
+          <div className='fixed bottom-0 left-0 right-0 bg-gradient-to-b from-transparent to-background h-16' />
         </ThemeProvider>
       </body>
     </html >
