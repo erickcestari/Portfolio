@@ -41,7 +41,7 @@ export default async function RootLayout({
   return (
     <html lang={dic.locale} suppressHydrationWarning>
       <SpeedInsights />
-      <body className={`${firaCode.className} font-medium bg-background text-accent-foreground`}>
+      <body className={`${firaCode.className} font-medium bg-background text-primary`}>
         <ThemeProvider attribute='class' defaultTheme="light" enableSystem>
           <main className='mx-auto max-w-5xl p-4 transition-colors cursor-default'>
             <FadeIn>
