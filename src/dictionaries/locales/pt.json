@@ -13,7 +13,7 @@
     "aboutMeContent": "Minha jornada de programacão começou em 2020, atualmente atuo como desenvolvedor FullStack. Inicialmente, fui cativado pelo desenvolvimento de jogos, aprendendo GML e Game Maker Studio 2. Porém, meu caminho acabou me levando desenvolvimento web, onde descobri um novo mundo.",
     "mySkills": "Minhas habilidades",
     "experience": "Experiência",
-    "experienceContent": "Tenho 10 meses de experiência como desenvolvedor FullStack, onde tive a oportunidade de trabalhar em diversos projetos e aprimorar minhas habilidades técnicas. Atualmente sou técnico de informática e estou matriculado no programa de Sistemas de Informação da Unifebe.",
+    "experienceContent": "Estou trabalhando à {experience} como desenvolvedor FullStack, onde tive a oportunidade de trabalhar em diversos projetos e aprimorar minhas habilidades técnicas. Atualmente sou técnico de informática e estou matriculado no programa de Sistemas de Informação da Unifebe.",
     "youCanView": "Você pode ver meus projetos e contribuições para projetos open-source",
     "here": "aqui",
     "contacts": "Contatos",
@@ -35,7 +35,7 @@
   "footer": {
     "textRights": "Todos os direitos reservados"
   },
-  "menu":{
+  "menu": {
     "projects": "Projetos"
   },
   "blog": {

@@ -11,6 +11,15 @@ interface AboutMeProps {
 
 const AboutMe = (aboutMeProps: AboutMeProps) => {
   const { dic: { aboutMe } } = aboutMeProps;
+  const startedWorking = new Date("2023-05-01")
+  const now = new Date();
+
+  const diffTime = Math.abs(now.getTime() - startedWorking.getTime());
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  const diffYears = Math.floor(diffDays / 365);
+  const diffMonths = Math.floor((diffDays % 365) / 30);
+
+  const experience = aboutMeProps.dic.currentLanguage == "English" ? `${diffYears} years, and ${diffMonths} months` : `${diffYears} anos e ${diffMonths} meses`;
 
   return (
     <div className="md:p-4 lg:px-6 space-y-2 text-base font-normal">
@@ -27,7 +36,7 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
       <h1 className="text-xl font-black border-b-2 border-stone-600">* {aboutMe.experience}</h1>
       <div className="space-y-2">
         <p>
-          {aboutMe.experienceContent}
+          {aboutMe.experienceContent.replace("{experience}", experience)}
         </p>
         <p>
           {aboutMe.youCanView}

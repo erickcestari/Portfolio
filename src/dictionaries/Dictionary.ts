@@ -16,7 +16,7 @@ type DictionaryType = {
     experienceContent: string
     youCanView: string
     here: string
-    contacts:string
+    contacts: string
     orAt: string
   }
   mySkills: {
@@ -34,7 +34,7 @@ type DictionaryType = {
     language: string
     viewOnGithub: string
   },
-  menu:{
+  menu: {
     projects: string
   },
   blog: {
