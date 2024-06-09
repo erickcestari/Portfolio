@@ -7,22 +7,22 @@ const MySkills = (mySkilssProps: MySkilssProps) => {
   return (
     <div className="space-y-2">
       <p>
-        <span className="font-bold">{mySkills.languages}:</span> Javascript, Typescript, Python, C#, GML, Rust, GO, C#, SQL.
+        <span className="font-bold">{mySkills.languages}:</span> Typescript, Rust, GO, C#, Python, SQL, GML.
       </p>
       <p>
         <span className="font-bold">{mySkills.frameworks}:</span> NextJS, Fastify, Express, NestJS, .NET, Gin.
       </p>
       <p>
-        <span className="font-bold">{mySkills.libraries}:</span> React, Prisma, Zod, Axios, MUI.
+        <span className="font-bold">{mySkills.libraries}:</span> React, Prisma, Zod, Axios, MUI, Shadcn UI.
       </p>
       <p>
-        <span className="font-bold">{mySkills.databases}:</span> Postgres, MySql.
+        <span className="font-bold">{mySkills.databases}:</span> Postgres, MySql, MongoDB.
       </p>
       <p>
-        <span className="font-bold">{mySkills.tools}:</span> Git, Docker, AWS, Gitlab, Github, VSCode, Windows.
+        <span className="font-bold">{mySkills.tools}:</span> Git, Docker, AWS, Gitlab, Github, VSCode, Windows, Linux.
       </p>
       <p>
-        <span className="font-bold">{mySkills.hosting}:</span> Vercel.
+        <span className="font-bold">{mySkills.hosting}:</span> Vercel, AWS, self-hosted.
       </p>
     </div>
   )
