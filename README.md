@@ -1,6 +1,6 @@
 ## Erick's Portfolio
 
-hello there 👋
+hello there! 👋
 
 This is my portfolio, it's a work in progress, but I'm trying to make it as good as possible.
 
