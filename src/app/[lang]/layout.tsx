@@ -8,6 +8,7 @@ import Menu from '@/components/layout/menu/Menu';
 import { getDictionary } from '@/dictionaries/getDictionary';
 import FadeIn from '@/components/animation/FadeIn';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { locales } from '@/dictionaries/locales';
 
 interface LangParamsType {
   lang: string
@@ -29,6 +30,18 @@ export const metadata: Metadata = {
   }
 }
 
+export const dynamic = "force-static";
+
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const langs = locales.map((locale) => ({
+    lang: locale
+  }));
+
+  return langs
+}
+
 export default async function RootLayout({
   children,
   params
@@ -36,7 +49,8 @@ export default async function RootLayout({
   children: React.ReactNode
   params: LangParamsType
 }>) {
-  const dic = await getDictionary(params.lang);
+  const { lang } = await params;
+  const dic = await getDictionary(lang);
 
   return (
     <html lang={dic.locale} suppressHydrationWarning>
