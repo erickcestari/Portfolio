@@ -27,7 +27,7 @@
     "i18next": "^23.5.1",
     "lucide-react": "^0.311.0",
     "negotiator": "^0.6.3",
-    "next": "^14.2.5",
+    "next": "^15.0.3",
     "next-themes": "^0.2.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -48,7 +48,7 @@
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "eslint": "latest",
-    "eslint-config-next": "^14.2.5",
+    "eslint-config-next": "^15.0.3",
     "postcss": "latest",
     "tailwindcss": "^3.4.0",
     "typescript": "latest"
