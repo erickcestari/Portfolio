@@ -2,10 +2,11 @@ import DisplayGithubRepository from '@/components/projects/DisplayGithubReposito
 import { getDictionary } from '@/dictionaries/getDictionary'
 import { GithubProfileType } from '@/types/GithubProfileType'
 import { GithubRepository } from '@/types/GithubRepositories'
-import { LangType } from '@/types/params/Language'
+import { LangParamsType } from '@/types/params/Language'
 import { githubAuthorization } from '@/api/github'
 
-const Projects = async ({ params: { lang } }: LangType) => {
+const Projects = async ({ params }: { params: LangParamsType }) => {
+  const { lang } = await params
   const dic = await getDictionary(lang)
   const url = "https://api.github.com/users/erickcestari/repos?per_page=100";
   const responseRepos = await fetch(url, { ...githubAuthorization, next: { revalidate: 3600 } });

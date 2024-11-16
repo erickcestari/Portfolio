@@ -6,19 +6,26 @@ import { ArticleBody } from "@/components/ui/ArticleBody";
 import { parseTitleHref } from "@/utils/parseTitleHref";
 import { Summary } from "@/components/ui/Summary";
 
+type Params = Promise<{ article: string }>
+
+export async function generateStaticParams() {
+  return articles?.map((article) => ({
+    title: parseTitleHref(article.title),
+  }));
+}
+
 export default async function ArticlePage({
   params,
-}: Readonly<{
-  params: { article: string };
-}>) {
-  const { article } = findArticleByTitle(params.article);
+}: { params: Params }) {
+  const { article } = await params;
+  const { article: _article } = findArticleByTitle(article);
 
   return (
     <section className="flex flex-col items-center">
-      <ArticleHero article={article} />
+      <ArticleHero article={_article} />
       <div className="grid grid-cols-1">
-        <ArticleBody articlePath={article.body} />
-        <Summary articleTopics={article.topics} />
+        <ArticleBody articlePath={_article.body} />
+        <Summary articleTopics={_article.topics} />
       </div>
     </section>
   );
@@ -27,33 +34,28 @@ export default async function ArticlePage({
 export async function generateMetadata({
   params,
 }: {
-  params: { article: string };
+  params: Params;
 }): Promise<Metadata> {
-  const { article } = findArticleByTitle(params.article);
+  const { article } = await params
+  const { article: _article } = findArticleByTitle(article);
   return {
-    title: article.title,
-    description: article.brief,
-    keywords: article.categories.map(({ title }) => title),
+    title: _article.title,
+    description: _article.brief,
+    keywords: _article.categories.map(({ title }) => title),
     twitter: {
       creator: "erick-cestari",
       creatorId: "erick-cestari",
-      images: [`/cover/${article.body}.png`],
+      images: [`/cover/${_article.body}.png`],
       title: "erick-cestari",
-      description: article?.brief,
+      description: _article?.brief,
     },
     openGraph: {
       url: "https://erickcestari.vercel.app",
-      images: [`/cover/${article.body}.png`],
-      title: article.title,
-      description: article.brief,
+      images: [`/cover/${_article.body}.png`],
+      title: _article.title,
+      description: _article.brief,
       type: "article",
-      tags: article.categories.map(({ title }) => title),
+      tags: _article.categories.map(({ title }) => title),
     },
   };
-}
-
-export async function generateStaticParams() {
-  return articles?.map((article) => ({
-    article: parseTitleHref(article.title),
-  }));
 }

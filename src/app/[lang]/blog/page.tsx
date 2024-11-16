@@ -14,13 +14,15 @@ export default async function Blog({
   params,
   searchParams,
 }: Readonly<{
-  params: { slug: string, lang: string };
-  searchParams: { categories: string | undefined };
+  params: Promise<{ slug: string, lang: string }>;
+  searchParams: Promise<{ categoriesParams: string | undefined }>;
 }>) {
+  const { lang } = await params;
+  const { categoriesParams } = await searchParams;
   const { articles } = findAllArticles({
-    categoriesQueryParams: searchParams.categories,
+    categoriesQueryParams: categoriesParams,
   });
-  const dic = await getDictionary(params.lang)
+  const dic = await getDictionary(lang)
 
   return (
     <section className="flex flex-col gap-[2rem]">
@@ -30,7 +32,7 @@ export default async function Blog({
 
       <div className="flex flex-col gap-[1rem]">
         <div className="flex justify-between items-center">
-          <ArticleTranslation dic={dic}/>
+          <ArticleTranslation dic={dic} />
         </div>
         <ArticlesList articlesData={articles} />
       </div>

@@ -1,13 +1,14 @@
 import AboutMe from "@/components/profile/AboutMe";
 import DisplayProfile from "@/components/profile/DisplayProfile";
 import { getDictionary } from "@/dictionaries/getDictionary";
-import { LangType } from "@/types/params/Language";
+import { LangParamsType } from "@/types/params/Language";
 import { GithubProfileType } from "@/types/GithubProfileType";
 import { githubAuthorization } from "@/api/github";
 
 const username = "erickcestari"
 
-export default async function Home({ params: { lang } }: LangType) {
+export default async function Home({ params }: { params: LangParamsType }) {
+  const { lang } = await params
   const dic = await getDictionary(lang)
   const response = await fetch(`https://api.github.com/users/${username}`, { ...githubAuthorization, next: { revalidate: 3600 } })
   const dataProfile: GithubProfileType = await response.json()

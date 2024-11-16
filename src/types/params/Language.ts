@@ -1,5 +1,3 @@
-export type LangType = {
-  params: {
-    lang: string
-  }
-}
+export type LangParamsType = Promise<{
+  lang: string
+}>
