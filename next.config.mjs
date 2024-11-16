@@ -4,7 +4,6 @@ import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 
 const nextConfig = {
-  output: 'export',
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
     remotePatterns: [
