@@ -33,11 +33,14 @@ export function LanguageDropDown({ activeLang, languagesMap }: LanguageDropDownP
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <div className="cursor-pointer">
-          <LanguageIcon
-            className="w-6 h-6"
-          />
-        </div>
+        <button
+          className="cursor-pointer"
+          aria-haspopup="menu"
+          aria-expanded="false"
+          aria-label="Select language"
+        >
+          <LanguageIcon className="w-6 h-6" />
+        </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 cursor-default">
         <DropdownMenuRadioGroup value={language} onValueChange={handleChangeLanguage}>
