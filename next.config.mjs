@@ -3,9 +3,15 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 
+
+/**
+ * @type {import('next').NextConfig}
+ */
 const nextConfig = {
+  output: "export",
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

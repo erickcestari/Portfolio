@@ -6,18 +6,19 @@ import { ArticleBody } from "@/components/ui/ArticleBody";
 import { parseTitleHref } from "@/utils/parseTitleHref";
 import { Summary } from "@/components/ui/Summary";
 
-type Params = Promise<{ article: string }>
+
+type Params = { article: string };
 
 export async function generateStaticParams() {
   return articles?.map((article) => ({
-    title: parseTitleHref(article.title),
+    article: parseTitleHref(article.title),
   }));
 }
 
 export default async function ArticlePage({
   params,
 }: { params: Params }) {
-  const { article } = await params;
+  const { article } = params;
   const { article: _article } = findArticleByTitle(article);
 
   return (
@@ -25,7 +26,6 @@ export default async function ArticlePage({
       <ArticleHero article={_article} />
       <div className="grid grid-cols-1">
         <ArticleBody articlePath={_article.body} />
-        <Summary articleTopics={_article.topics} />
       </div>
     </section>
   );

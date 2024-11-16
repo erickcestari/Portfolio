@@ -14,11 +14,11 @@ export default async function Blog({
   params,
   searchParams,
 }: Readonly<{
-  params: Promise<{ slug: string, lang: string }>;
-  searchParams: Promise<{ categoriesParams: string | undefined }>;
+  params: { slug: string, lang: string };
+  searchParams: { categoriesParams: string | undefined };
 }>) {
-  const { lang } = await params;
-  const { categoriesParams } = await searchParams;
+  const { lang } = params;
+  const { categoriesParams } = searchParams;
   const { articles } = findAllArticles({
     categoriesQueryParams: categoriesParams,
   });
