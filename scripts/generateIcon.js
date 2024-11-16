@@ -5,8 +5,8 @@ const axios = require('axios');
 
 async function generateIcon() {
   const githubIconUrl = 'https://github.com/erickcestari.png';
-  const outputDir = path.resolve(__dirname, '../public/icons');
-  const outputPath = path.join(outputDir, 'github-icon.png');
+  const outputDir = path.resolve(__dirname, '../src/app/[lang]');
+  const outputPath = path.join(outputDir, 'icon.png');
 
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
