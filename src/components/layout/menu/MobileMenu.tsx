@@ -18,14 +18,14 @@ const MobileMenu = (mobileMenuProps: MobileMenuProps) => {
   return (
     <div className="flex justify-end flex-row md:hidden">
       <Sheet open={status} onOpenChange={(val) => setStatus(val)}>
-        <SheetTrigger><Bars3Icon className="w-8 stroke-2" /></SheetTrigger>
+        <SheetTrigger aria-label='Open Mobile Menu'><Bars3Icon className="w-8 stroke-2" /></SheetTrigger>
         <SheetContent>
           <SheetHeader>
             <SheetTitle>Menu</SheetTitle>
             <div className='flex flex-col justify-start items-start gap-2'>
-                <NavLink href="/" name="Erick Cestari" currentLocale={dic.locale} full closeMenu={() => setStatus(false)}/>
-                <NavLink href="/projects" name={dic.menu.projects} currentLocale={dic.locale} full closeMenu={() => setStatus(false)}/>
-                <NavLink href="/blog" name="Blog" currentLocale={dic.locale} full closeMenu={() => setStatus(false)}/>
+              <NavLink href="/" name="Erick Cestari" currentLocale={dic.locale} full closeMenu={() => setStatus(false)} />
+              <NavLink href="/projects" name={dic.menu.projects} currentLocale={dic.locale} full closeMenu={() => setStatus(false)} />
+              <NavLink href="/blog" name="Blog" currentLocale={dic.locale} full closeMenu={() => setStatus(false)} />
             </div>
             <div className='flex items-center justify-between'>
               <ToogleDarkLight />
