@@ -28,7 +28,7 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
       <h1 className="text-xl font-black border-b-2 border-stone-600">* {aboutMe.experience}</h1>
       <div className="space-y-2">
         <p>
-          <ExperienceTimer startDate={startedWorking} locale={aboutMeProps.dic.locale} valueToReplace={aboutMe.experienceContent} />)
+          <ExperienceTimer startDate={startedWorking} locale={aboutMeProps.dic.locale} valueToReplace={aboutMe.experienceContent} />
         </p>
         <p>
           {aboutMe.youCanView}
