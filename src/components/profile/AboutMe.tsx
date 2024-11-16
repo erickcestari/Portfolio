@@ -32,7 +32,7 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
         </p>
         <p>
           {aboutMe.youCanView}
-          <StyledLink href="/projects"> {aboutMe.here}</StyledLink> {aboutMe.orAt} <StyledLink href="https://github.com/erickcestari" blank>github</StyledLink>.
+          <StyledLink href={`/${aboutMeProps.dic.locale}/projects`}> {aboutMe.here}</StyledLink> {aboutMe.orAt} <StyledLink href="https://github.com/erickcestari" blank>github</StyledLink>.
         </p>
       </div>
       <h1 className="text-xl font-black border-b-2 border-stone-600">* {aboutMe.contacts}</h1>

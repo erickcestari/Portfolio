@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import React from 'react'
 
 interface StyledLinkProps {
   children: React.ReactNode
