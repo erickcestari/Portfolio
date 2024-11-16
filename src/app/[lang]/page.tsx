@@ -1,14 +1,13 @@
 import AboutMe from "@/components/profile/AboutMe";
 import DisplayProfile from "@/components/profile/DisplayProfile";
 import { getDictionary } from "@/dictionaries/getDictionary";
-import { LangType } from "@/types/params/Language";
+import { LangParamsType } from "@/types/params/Language";
 import { GithubProfileType } from "@/types/GithubProfileType";
 import { githubAuthorization } from "@/api/github";
 import { locales } from "@/dictionaries/locales";
 
 
-
-export default async function Home({ params }: LangType) {
+export default async function Home({ params }: { params: LangParamsType }) {
   const { lang } = await params
   const dic = await getDictionary(lang)
   const username = "erickcestari"
