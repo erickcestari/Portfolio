@@ -15,9 +15,10 @@ const NavLink = (props: NavLinkProps) => {
   const { href, name, currentLocale, closeMenu, full } = props;
   const pathName = usePathname();
   const hrefWithLocale = `/${currentLocale}${href}`
+  const isSelected = pathName === hrefWithLocale ? "opacity-60" : ""
 
   return (
-    <Link href={hrefWithLocale} onClick={() => closeMenu && closeMenu()} className={`transition-colors hover:opacity-60 ${full && "w-full"} ${pathName === hrefWithLocale && "opacity-60"}`}>
+    <Link href={hrefWithLocale} onClick={() => closeMenu && closeMenu()} className={`transition-colors hover:opacity-60 ${full && "w-full"} ${isSelected}`}>
       <p className="text-lg">
         {name}
       </p>
