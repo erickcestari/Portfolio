@@ -105,12 +105,11 @@
 @layer components {
   .article-body {
     @apply prose prose-lg text-primary prose-invert prose-purple;
-
     @apply prose-p:font-medium prose-p:break-words prose-h2:text-primary prose-h2:font-bold prose-h2:border-b-4 prose-h2:border-dotted prose-h2:pb-2 prose-h2:border-amber-500 prose-h2:mt-10;
-
     @apply prose-pre:mt-0 prose-pre:p-0 prose-pre:rounded-lg prose-strong;
-
     @apply prose-code:bg-stone-900 prose-code:py-1 prose-code:rounded-md;
+    @apply mx-auto;
+    max-width: 80%;
   }
 }
 

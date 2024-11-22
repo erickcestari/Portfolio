@@ -23,7 +23,7 @@ export default async function ArticlePage({
   return (
     <section className="flex flex-col items-center">
       <ArticleHero article={_article} />
-      <div className="grid grid-cols-1">
+      <div className="grid grid-cols-1 w-full">
         <ArticleBody articlePath={_article.body} />
         <Summary articleTopics={_article.topics} />
       </div>
