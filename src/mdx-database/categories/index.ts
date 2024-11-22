@@ -6,4 +6,7 @@ export const categories: Category[] = [
   { id: 4, title: "Portuguese"},
   { id: 5, title: "English"},
   { id: 6, title: "Mathematics"},
+  { id: 7, title: "Cryptocurrency"},
+  { id:8 , title: "Blockchain"},
+  { id: 9, title: "Bitcoin"},
 ];

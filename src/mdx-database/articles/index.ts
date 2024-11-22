@@ -19,4 +19,23 @@ export const articles: Article[] = [
     createdAt: "2024-01-28",
     updatedAt: "2024-01-28",
   },
+  {
+    id: 1,
+    title: "Mining Bitcoin",
+    brief:
+      "Explaining the process of mining Bitcoin and how it works",
+    categories: [
+      categories.find(({ title }) => title === "English")!,
+      categories.find(({ title }) => title === "Bitcoin")!,
+      categories.find(({ title }) => title === "Cryptocurrency")!,
+      categories.find(({ title }) => title === "Blockchain")!
+    ],
+    topics: [
+      "Mining",
+    ],
+    language: "en",
+    body: `mining-bitcoin`,
+    createdAt: "2024-12-21",
+    updatedAt: "2024-12-21",
+  },
 ];
