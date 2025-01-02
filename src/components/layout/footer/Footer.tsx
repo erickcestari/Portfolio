@@ -8,7 +8,7 @@ const Footer = (footerProps: FooterProps) => {
     <div
       className="relative flex items-center justify-center pb-3 px-3 mt-1 text-center z-10"
     >
-      © 2024 Erick Cestari. {textRights}.
+      © {(new Date()).getFullYear()} Erick Cestari. {textRights}.
     </div>
   );
 };
