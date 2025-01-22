@@ -57,7 +57,10 @@
     overflow-x: hidden;
     min-height: 100vh;
     background-image: url('/noise.svg');
-  }
+    background-repeat: repeat;
+    background-size: 1300px 1300px;
+    background-position: 0 0;
+}
 
   h1 {
     line-height: 1.5;
