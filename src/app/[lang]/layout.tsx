@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: 'Erick Cestari portfolio',
   openGraph: {
     type: 'website',
-    url: 'https://erick-cestari-portfolio.vercel.app/',
+    url: 'https://erick-cestari-portfolio.dev/',
     title: 'Erick Cestari Portfolio',
     description: 'Erick Cestari portfolio',
   },

@@ -35,31 +35,31 @@ const addLanguage = (pageMap: PageMap): MetadataRoute.Sitemap => {
 const makeUrlMap = () => {
   const urlMap: MetadataRoute.Sitemap = [];
   urlMap.push(...addLanguage({
-    url: 'https://erickcestari.vercel.app',
+    url: 'https://erickcestari.dev',
     lastModified: new Date(),
     changeFrequency: 'yearly',
     priority: 1,
   }));
   urlMap.push(...addLanguage({
-    url: 'https://erickcestari.vercel.app/projects',
+    url: 'https://erickcestari.dev/projects',
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
   urlMap.push(...addLanguage({
-    url: 'https://erickcestari.vercel.app/blog',
+    url: 'https://erickcestari.dev/blog',
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.5,
   }));
   urlMap.push(...addLanguage({
-    url: 'https://erickcestari.vercel.app/blog',
+    url: 'https://erickcestari.dev/blog',
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.5,
   }));
   articles?.map((article) => {
-    const url = `https://erickcestari.vercel.app/blog/${parseTitleHref(article.title)}`;
+    const url = `https://erickcestari.dev/blog/${parseTitleHref(article.title)}`;
     urlMap.push(...addLanguage({
       url,
       lastModified: new Date(),
