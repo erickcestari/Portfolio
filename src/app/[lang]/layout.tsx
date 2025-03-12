@@ -9,6 +9,7 @@ import { getDictionary } from '@/dictionaries/getDictionary';
 import FadeIn from '@/components/animation/FadeIn';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { locales } from '@/dictionaries/locales';
+import { DOMAIN } from '@/utils/domain';
 
 interface LangParamsType {
   lang: string
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   description: 'Erick Cestari portfolio',
   openGraph: {
     type: 'website',
-    url: 'https://erick-cestari-portfolio.dev/',
+    url: DOMAIN,
     title: 'Erick Cestari Portfolio',
     description: 'Erick Cestari portfolio',
   },

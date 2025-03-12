@@ -3,6 +3,7 @@ import { Language } from '@/types/Language'
 import { getLanguages } from '@/utils/getLanguages';
 import { articles } from '@/mdx-database/articles';
 import { parseTitleHref } from '@/utils/parseTitleHref';
+import { DOMAIN } from '@/utils/domain';
 
 type PageMap = {
   url: string;
@@ -35,31 +36,31 @@ const addLanguage = (pageMap: PageMap): MetadataRoute.Sitemap => {
 const makeUrlMap = () => {
   const urlMap: MetadataRoute.Sitemap = [];
   urlMap.push(...addLanguage({
-    url: 'https://erickcestari.dev',
+    url:  DOMAIN,
     lastModified: new Date(),
     changeFrequency: 'yearly',
     priority: 1,
   }));
   urlMap.push(...addLanguage({
-    url: 'https://erickcestari.dev/projects',
+    url: DOMAIN + '/projects',
     lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: 0.8,
   }));
   urlMap.push(...addLanguage({
-    url: 'https://erickcestari.dev/blog',
+    url: DOMAIN + '/blog',
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.5,
   }));
   urlMap.push(...addLanguage({
-    url: 'https://erickcestari.dev/blog',
+    url: DOMAIN + '/blog',
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.5,
   }));
   articles?.map((article) => {
-    const url = `https://erickcestari.dev/blog/${parseTitleHref(article.title)}`;
+    const url = DOMAIN + `/blog/${parseTitleHref(article.title)}`;
     urlMap.push(...addLanguage({
       url,
       lastModified: new Date(),

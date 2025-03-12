@@ -5,6 +5,7 @@ import { ArticleHero } from "@/components/layout/blog/article/ArticleHero";
 import { ArticleBody } from "@/components/ui/ArticleBody";
 import { parseTitleHref } from "@/utils/parseTitleHref";
 import { Summary } from "@/components/ui/Summary";
+import { DOMAIN } from "@/utils/domain";
 
 type Params = Promise<{ article: string }>
 
@@ -50,7 +51,7 @@ export async function generateMetadata({
       description: _article?.brief,
     },
     openGraph: {
-      url: "https://erickcestari.dev",
+      url: DOMAIN,
       images: [`/cover/${_article.body}.png`],
       title: _article.title,
       description: _article.brief,
