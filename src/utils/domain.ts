@@ -1,1 +1,1 @@
-export const DOMAIN = "https://portfolio.erickcestari.dev"
+export const DOMAIN = "https://erickcestari.dev"

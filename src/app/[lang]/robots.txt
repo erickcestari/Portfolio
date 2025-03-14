@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 Disallow: /private/
-Sitemap: https://portfolio.erickcestari.dev/sitemap.xml
+Sitemap: https://erickcestari.dev/sitemap.xml
