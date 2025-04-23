@@ -39,7 +39,7 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
       <h1 className="text-xl font-black border-b-2 border-stone-600">* {aboutMe.contacts}</h1>
       <div className="flex space-x-4">
         <Contacts title="Github" url="https://github.com/erickcestari" src="/github.svg" />
-        <Contacts title="Linkedin" url="https://www.linkedin.com/in/erick-cestari" src="/linkedin.svg" />
+        <Contacts title="Linkedin" url="https://www.linkedin.com/in/erickcestari" src="/linkedin.svg" />
       </div>
     </div>
   );
