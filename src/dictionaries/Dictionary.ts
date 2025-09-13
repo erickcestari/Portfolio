@@ -1,43 +1,34 @@
 type DictionaryType = {
-  en: string
-  pt: string
-  locale: string
-  currentLanguage: string
+  en: string;
+  pt: string;
+  locale: string;
+  currentLanguage: string;
   displayProfile: {
-    followers: string
-    following: string
-  }
+    followers: string;
+    following: string;
+  };
   aboutMe: {
-    hiIam: string
-    aboutMe: string
-    aboutMeContent: string
-    mySkills: string
-    experience: string
-    experienceContent: string
-    youCanView: string
-    here: string
-    contacts: string
-    orAt: string
-  }
-  mySkills: {
-    languages: string
-    frameworks: string
-    libraries: string
-    databases: string
-    tools: string
-    hosting: string
-  }
+    hiIam: string;
+    aboutMe: string;
+    aboutMeContent: string;
+    experience: string;
+    experienceContent: string;
+    youCanView: string;
+    here: string;
+    contacts: string;
+    orAt: string;
+  };
   footer: {
-    textRights: string
-  }
+    textRights: string;
+  };
   projects: {
-    language: string
-    viewOnGithub: string
-  },
+    language: string;
+    viewOnGithub: string;
+  };
   menu: {
-    projects: string
-  },
+    projects: string;
+  };
   blog: {
-    articles: string
-  }
+    articles: string;
+  };
 };

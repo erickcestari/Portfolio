@@ -11,21 +11,12 @@
     "hiIam": "Hi, I am",
     "aboutMe": "About Me",
     "aboutMeContent": "My programming journey began in 2020. Initially, I was captivated by game development, diving into GML and Game Maker Studio 2. However, my path led me to web development, and now I'm working as a Bitcoin open-source developer with a grantee by Vinteum, where I'm contributing to the Bitcoin ecosystem.",
-    "mySkills": "My Skills",
     "experience": "Experience",
     "experienceContent": "I am currently a Bitcoin open-source developer with a grantee provided by Vinteum, where I contribute to Bitcoin-related projects and continue to enhance my technical skills. My educational background aligns with my career aspirations as I am enrolled in the Information Systems program at Unifebe.",
     "youCanView": "You can view my projects and contributions to open-source Bitcoin projects in the ",
     "here": "projects page",
     "contacts": "Contacts",
     "orAt": "or at"
-  },
-  "mySkills": {
-    "languages": "Languages",
-    "frameworks": "Frameworks",
-    "libraries": "Libraries",
-    "databases": "Databases",
-    "tools": "Tools",
-    "hosting": "Hosting"
   },
   "footer": {
     "textRights": "All rights reserved"
