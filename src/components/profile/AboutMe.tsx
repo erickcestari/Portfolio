@@ -39,11 +39,6 @@ const AboutMe = (aboutMeProps: AboutMeProps) => {
         </p>
         <p>
           {aboutMe.youCanView}
-          <StyledLink href={`/${aboutMeProps.dic.locale}/projects`}>
-            {" "}
-            {aboutMe.here}
-          </StyledLink>{" "}
-          {aboutMe.orAt}{" "}
           <StyledLink href="https://github.com/erickcestari" blank>
             github
           </StyledLink>
